@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-//using GooglePlayGames;
-//using GooglePlayGames.BasicApi;
+using System;
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
 
 public class TitleSceneManager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class TitleSceneManager : MonoBehaviour
     private bool hasPlayerInformation = false;
 
     private string nickName;
+
+    private bool touchEnable = true;
+
+    private Action func;
 
     private void Start()
     {
@@ -59,6 +64,9 @@ public class TitleSceneManager : MonoBehaviour
 
     public void TouchBtn()
     {
+        if (!touchEnable) return;
+
+
         if (hasPlayerInformation) // 로그인되어있으면
         {
             LoadingSceneManager.SetNextScene("GameScene");
@@ -88,10 +96,7 @@ public class TitleSceneManager : MonoBehaviour
 
     public void GoogleLoginBtn()
     {
-        Debug.Log("구글 로그인 작업");
         GoogleLoginProcess();
-
-        InitTitleScene();
     }
 
     public void CreateAccountBtn()
@@ -102,28 +107,28 @@ public class TitleSceneManager : MonoBehaviour
 
     private void GoogleLoginProcess()
     {
-
-        //PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
-        Popup($"현재 해당 작업은 구현되어있지않습니다!");
+        PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
     }
 
-    //private void ProcessAuthentication(SignInStatus status)
-    //{
-    //if (status == SignInStatus.Success)
-    //{
-    //    string name = PlayGamesPlatform.Instance.GetUserDisplayName();
-    //    string id = PlayGamesPlatform.Instance.GetUserId();
-    //    string ImgUrl = PlayGamesPlatform.Instance.GetUserImageUrl();
+    private void ProcessAuthentication(SignInStatus status)
+    {
+        if (status == SignInStatus.Success)
+        {
+            string name = PlayGamesPlatform.Instance.GetUserDisplayName();
+            string id = PlayGamesPlatform.Instance.GetUserId();
+            string ImgUrl = PlayGamesPlatform.Instance.GetUserImageUrl();
 
-    //    hasPlayerInformation = true;
-    //    Debug.Log("구글 로그인 성공 " + name);
-    //}
-    //else
-    //{
-    //    hasPlayerInformation = false;
-    //    Debug.Log("구글 로그인 실패 ");
-    //}
-    //}
+            hasPlayerInformation = true;
+            func += InitTitleScene;
+            Popup($"구글 로그인 성공" + name);
+        }
+        else
+        {
+            hasPlayerInformation = false;
+            func += InitTitleScene;
+            Popup($"구글 로그인 실패");
+        }
+    }
 
     #endregion
 
@@ -137,8 +142,8 @@ public class TitleSceneManager : MonoBehaviour
         DataManager.Instance.SaveData();
 
         Popup($"계정 생성에 성공하였습니다!\n{nickName}님!");
-        Debug.Log("일반 계정 생성 완료");
-        InitTitleScene();
+
+        func += InitTitleScene;
     }
 
     private bool CheckAccountCondition()
@@ -169,6 +174,7 @@ public class TitleSceneManager : MonoBehaviour
 
     private void Popup(string txt)
     {
+        touchEnable = false;
         popupText.text = txt;
         popup.SetActive(true);
         LeanTween.scale(popup, Vector3.one, 0.7f).setEase(LeanTweenType.easeOutElastic);
@@ -176,7 +182,11 @@ public class TitleSceneManager : MonoBehaviour
 
     public void OkayBtn()
     {
+        touchEnable = true;
         LeanTween.scale(popup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+
+        func?.Invoke();
+        func = null;
     }
 
     #endregion

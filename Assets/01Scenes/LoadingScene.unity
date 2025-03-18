@@ -176,8 +176,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAE4A\uC219\uD788 \uC2DC\uAC04\uC774 \uD718\uBAB0\uC544\uCE58\uB294\uC911
-    ..."
+  m_text: "\uBCC4\uBE5B \uD30C\uB3C4\uB97C \uB530\uB77C \uD5E4\uC5C4\uCE58\uB294
+    \uC911 ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d3995b29301e8b43bcf575e279a7e1d, type: 2}
   m_sharedMaterial: {fileID: -8838494660716872957, guid: 9d3995b29301e8b43bcf575e279a7e1d, type: 2}
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e45bce037633ea48b483a90418968b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testMode: 1
+  testMode: 0
 --- !u!114 &874769926
 MonoBehaviour:
   m_ObjectHideFlags: 0

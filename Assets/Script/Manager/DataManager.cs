@@ -18,6 +18,7 @@ public class DataManager : Singleton<DataManager>, IManager
 
     public void InitManager()
     {
+        // '일반' 계정 불러오기
         //if (!loadData) LoadData();
     }
 
