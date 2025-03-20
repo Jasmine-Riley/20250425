@@ -151,11 +151,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1216131327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -237}
-  m_SizeDelta: {x: 1000, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &256083373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,8 +176,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBCC4\uBE5B \uD30C\uB3C4\uB97C \uB530\uB77C \uD5E4\uC5C4\uCE58\uB294
-    \uC911 ..."
+  m_text: "\uC2A4\uD154\uC740 \uC544\uC2A4\uD2B8\uB77C\uC758 \uBCC4\uBE5B\uC6B0\uCCB4\uBD80\uB85C
+    \uB9DD\uB839\uB4E4\uC758 \uD3B8\uC9C0\uB97C \uBC30\uB2EC\uD558\uB294 \uC77C\uC744
+    \uD558\uACE0 \uC788\uB2E4.\n\uCC45\uC784\uAC10 \uAC15\uD55C \uC2A4\uD154\uC740
+    \uD56D\uC0C1 \uBB34\uC0AC\uD788 \uC218\uCDE8\uC778\uC5D0\uAC8C \uD3B8\uC9C0\uB97C
+    \uC804\uB2EC\uD55C\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d3995b29301e8b43bcf575e279a7e1d, type: 2}
   m_sharedMaterial: {fileID: -8838494660716872957, guid: 9d3995b29301e8b43bcf575e279a7e1d, type: 2}
@@ -319,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &769436877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -762,14 +765,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3447906320cfff24e993e6dec3c43dbc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -804,7 +807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1276190450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -844,7 +847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5afed8f16b7514c49b186d481cbaea0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6bf0062a4cc636848b2ed7b01ec427dd, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

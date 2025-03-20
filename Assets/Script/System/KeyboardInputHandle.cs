@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class KeyboardInputHandle : MonoBehaviour, IInputHandle
 {
-    public Vector2 GetInput()
+    public Vector3 GetInput()
     {
-        return new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        return new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
     }
 }

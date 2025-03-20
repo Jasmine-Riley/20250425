@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IInputHandle
 {
-    public Vector2 GetInput();
+    public Vector3 GetInput();
 }
