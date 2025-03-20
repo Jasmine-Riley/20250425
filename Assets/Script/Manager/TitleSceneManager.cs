@@ -69,7 +69,7 @@ public class TitleSceneManager : MonoBehaviour
 
         if (hasPlayerInformation) // 로그인되어있으면
         {
-            LoadingSceneManager.SetNextScene("GameScene");
+            LoadingSceneManager.SetNextScene("LobbyScene");
             SceneManager.LoadScene("LoadingScene");
         }
         else

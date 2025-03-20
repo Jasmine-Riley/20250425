@@ -7,12 +7,11 @@ public class PostBox : MonoBehaviour, IInteract
 
     private void Start()
     {
-        OnClick += UIManager.Instance.PopUpMail;
+        OnClick += UIManager.Instance.OpenMail;
     }
 
     public void Interaction()
     {
         OnClick?.Invoke();
-        Debug.Log("편지 띄우기!");
     }
 }
