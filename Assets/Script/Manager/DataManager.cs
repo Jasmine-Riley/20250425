@@ -16,10 +16,14 @@ public class DataManager : Singleton<DataManager>, IManager
     private PlayerData playerData;
     public PlayerData PlayerData => playerData;
 
+    public bool testSkip = false;
+
     public void InitManager()
     {
         // '일반' 계정 불러오기
-        //if (!loadData) LoadData();
+
+        if(testSkip)
+            if (!loadData) LoadData();
     }
 
     public bool LoadData()
