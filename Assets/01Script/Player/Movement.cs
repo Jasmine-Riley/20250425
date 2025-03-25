@@ -3,7 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour, IMove
 {
     private CharacterController controller;
-    private float speed = 5f;
+    [SerializeField] private float speed = 5f;
     public bool movable { get; protected set; }
 
     private void Awake()

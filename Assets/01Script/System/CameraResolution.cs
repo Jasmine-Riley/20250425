@@ -13,7 +13,7 @@ public class CameraResolution : MonoBehaviour
             var cameraRect = camera.rect;
 
             float xRatio = 9;
-            float yRatio = 20;
+            float yRatio = 16;
 
             float scale_height = ((float)Screen.width / Screen.height) / (yRatio / xRatio);
             float scale_width = 1f / scale_height;

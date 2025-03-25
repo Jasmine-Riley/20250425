@@ -19,10 +19,12 @@ public class LoadingSceneManager : MonoBehaviour
     private static string nextSceneName;
     private AsyncOperation asyncScene;
 
+    private float speed = 1f;
+
     private void Awake()
     {
-        runner = loadingBar.transform.GetChild(0).gameObject;
-        postBox = loadingBar.transform.GetChild(1).gameObject;
+        postBox = loadingBar.transform.GetChild(0).gameObject;
+        runner = loadingBar.transform.GetChild(1).gameObject;
 
         runnerRect = runner.GetComponent<RectTransform>();
 
@@ -31,7 +33,23 @@ public class LoadingSceneManager : MonoBehaviour
         endPos = postBox.GetComponent<RectTransform>().position;
         startPos.y = endPos.y;
 
+        StartCoroutine("SetSpeed");
         StartCoroutine("LoadSceneAsync");
+    }
+
+    private IEnumerator SetSpeed()
+    {
+        speed = 80f;
+        yield return YieldInstructionCache.WaitForSeconds(Random.Range(0.8f, 1.2f));
+        speed = 0;
+        yield return YieldInstructionCache.WaitForSeconds(Random.Range(0.1f, 1.0f));
+        while (true) 
+        {
+            speed = Random.Range(1f, 30f);
+            yield return YieldInstructionCache.WaitForSeconds(Random.Range(0.5f, 3f));
+            speed = 0;
+            yield return YieldInstructionCache.WaitForSeconds(Random.Range(0.1f, 1.0f));
+        }
     }
 
 
@@ -45,26 +63,28 @@ public class LoadingSceneManager : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         asyncScene = SceneManager.LoadSceneAsync(nextSceneName);
         asyncScene.allowSceneActivation = false;
-        var realTime = 0f;
 
+        var speedC = 0f;
         var timeC = 0.0f;
         while(!asyncScene.isDone)
         {
-            timeC += Time.deltaTime * 0.01f;
-            realTime += Time.deltaTime;
+            timeC += Time.deltaTime * (0.0001f * speed);
+            speedC = speed == 0 ? 0.0001f : timeC;
+
+            //Debug.Log(speedC);
 
             if(asyncScene.progress >= 0.9f)
             {
-                loadingBar.fillAmount = Mathf.Lerp(loadingBar.fillAmount, 1f, timeC);
+                loadingBar.fillAmount = Mathf.Lerp(loadingBar.fillAmount, 1f, speedC);
 
-                runnerRect.position = new Vector3(Mathf.Lerp(runnerRect.position.x, endPos.x, timeC), runnerRect.position.y, runnerRect.position.z);
+                runnerRect.position = new Vector3(Mathf.Lerp(runnerRect.position.x, endPos.x, speedC), runnerRect.position.y, runnerRect.position.z);
                 if (loadingBar.fillAmount > 0.99f)
                     SceneLoadEnd();
             }
             else
             {
-                loadingBar.fillAmount = Mathf.Lerp(loadingBar.fillAmount, asyncScene.progress, timeC);
-                runnerRect.position = new Vector3(Mathf.Lerp(runnerRect.position.x, endPos.x, timeC), runnerRect.position.y, runnerRect.position.z);
+                loadingBar.fillAmount = Mathf.Lerp(loadingBar.fillAmount, asyncScene.progress, speedC);
+                runnerRect.position = new Vector3(Mathf.Lerp(runnerRect.position.x, endPos.x, speedC), runnerRect.position.y, runnerRect.position.z);
 
                 if (loadingBar.fillAmount >= asyncScene.progress)
                     timeC = 0.0f;
@@ -75,14 +95,23 @@ public class LoadingSceneManager : MonoBehaviour
 
     private void SceneLoadEnd()
     {
-        runnerRect.position = new Vector3(endPos.x + 10, runnerRect.position.y, runnerRect.position.z);
         StopCoroutine("LoadSceneAsync");
+        StopCoroutine("Speed");
+
         StartCoroutine("Effect");
     }
 
     private IEnumerator Effect()
     {
-        yield return YieldInstructionCache.WaitForSeconds(1f);
+        //var time = 0f;
+        //var startX = runnerRect.position.x;
+        //while (time < 1f)
+        //{
+        //    time += Time.deltaTime;
+        //    runnerRect.position = new Vector3(Mathf.Lerp(startX, endPos.x, time), runnerRect.position.y, runnerRect.position.z);
+        //    yield return null;
+        //}
+        yield return YieldInstructionCache.WaitForSeconds(0.05f);
         asyncScene.allowSceneActivation = true;
     }
 }
