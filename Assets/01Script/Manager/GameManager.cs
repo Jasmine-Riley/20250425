@@ -20,9 +20,9 @@ public class GameManager : Singleton<GameManager>
 
     private void AssignManagers()
     {
-        GameObject.Find("UIManager").TryGetComponent<UIManager>(out uiManager);
-        GameObject.Find("PoolManager").TryGetComponent<PoolManager>(out poolManager);
-        GameObject.Find("Global Volume").TryGetComponent<Volume>(out volume);
+        GameObject.Find("UIManager")?.TryGetComponent<UIManager>(out uiManager);
+        GameObject.Find("PoolManager")?.TryGetComponent<PoolManager>(out poolManager);
+        GameObject.Find("Global Volume")?.TryGetComponent<Volume>(out volume);
     }
 
     private void InitManagers()
