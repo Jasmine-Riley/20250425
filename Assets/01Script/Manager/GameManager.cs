@@ -16,6 +16,9 @@ public class GameManager : Singleton<GameManager>
         InitManagers();
 
         player = GameObject.Find("Player");
+
+        player.TryGetComponent<PlayerController>(out var p);
+        p.Init();
     }
 
     private void AssignManagers()

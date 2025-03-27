@@ -5,7 +5,7 @@ public class TouchHandler : MonoBehaviour
 {
     void Update()
     {
-        if(UIManager.Instance)
+        if (UIManager.Instance)
             if (UIManager.Instance.touchBlocking) return;
 
         if (Input.GetMouseButtonDown(0))
@@ -21,7 +21,8 @@ public class TouchHandler : MonoBehaviour
         }
 
 
-        // ¸ð¹ÙÀÏ¿ë
+
+        // Â¸Ã°Â¹Ã™Ã€ÃÂ¿Ã«
 
         //if (Input.touchCount > 0)
         //{

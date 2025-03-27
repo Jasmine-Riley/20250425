@@ -86,4 +86,9 @@ public class Enemy : PoolObject, IMove
             ChangeState(EnemyState.Chase);
         }
     }
+
+    public void Jump()
+    {
+        throw new System.NotImplementedException();
+    }
 }
