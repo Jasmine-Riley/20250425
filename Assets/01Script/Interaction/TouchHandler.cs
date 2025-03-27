@@ -22,7 +22,7 @@ public class TouchHandler : MonoBehaviour
 
 
 
-        // ¸ð¹ÙÀÏ¿ë
+        // Â¸Ã°Â¹Ã™Ã€ÃÂ¿Ã«
 
         //if (Input.touchCount > 0)
         //{

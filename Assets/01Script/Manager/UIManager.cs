@@ -47,7 +47,7 @@ public class UIManager : Singleton<UIManager>
 
     private void HandleButtonClick(ButtonType type)
     {
-        Debug.Log("¹öÆ°Å¬¸¯µÊ" + type.ToString());
+        Debug.Log("ï¿½ï¿½Æ°Å¬ï¿½ï¿½ï¿½ï¿½" + type.ToString());
         switch(type)
         {
             case ButtonType.Slot1:
