@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public enum ButtonType
 {
     Slot1,
-    Slot2,
+    //Slot2,
 }
 
 public class UIManager : Singleton<UIManager> 
@@ -23,6 +23,11 @@ public class UIManager : Singleton<UIManager>
     public static event Action OnPressBtnSlot1;
     public static event Action OnPressBtnSlot2;
 
+    private GameObject obj;
+
+
+    public bool useTouchPad = false;
+
     public void Init()
     {
         var ui = GameObject.Find("UI");
@@ -37,11 +42,15 @@ public class UIManager : Singleton<UIManager>
         
         mission = ui.transform.GetChild(num++).gameObject;
 
-        GameObject.Find("BtnSlot1").TryGetComponent<Button>(out var btn);
+        if (!useTouchPad) return;
+
+        obj = GameObject.Find("BtnSlot1");
+        obj.TryGetComponent<Button>(out var btn);
         btn.onClick.AddListener(()=>HandleButtonClick(ButtonType.Slot1));
 
-        GameObject.Find("BtnSlot2").TryGetComponent<Button>(out btn);
-        btn.onClick.AddListener(() => HandleButtonClick(ButtonType.Slot2));
+        //obj = GameObject.Find("BtnSlot2");
+        //obj.TryGetComponent<Button>(out btn);
+        //btn.onClick.AddListener(() => HandleButtonClick(ButtonType.Slot2));
 
     }
 
@@ -53,9 +62,9 @@ public class UIManager : Singleton<UIManager>
             case ButtonType.Slot1:
                 OnPressBtnSlot1?.Invoke();
                 break;
-            case ButtonType.Slot2:
-                OnPressBtnSlot2?.Invoke();
-                break;
+            //case ButtonType.Slot2:
+            //    OnPressBtnSlot2?.Invoke();
+            //    break;
         }
     }
 

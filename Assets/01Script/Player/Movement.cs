@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour, IMove
     private void Update()
     {
         if(!controller.isGrounded)
-            moveVect.y += -9.81f * Time.deltaTime * 0.08f;
+            moveVect.y += -9.81f * Time.deltaTime * 0.005f;
     }
 
     public void Move(Vector3 direction)
@@ -31,6 +31,6 @@ public class Movement : MonoBehaviour, IMove
     public void Jump()
     {
         if(controller.isGrounded)
-            moveVect.y = 0.25f;
+            moveVect.y = 0.02f;
     }
 }
