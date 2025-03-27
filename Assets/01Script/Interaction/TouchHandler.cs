@@ -5,6 +5,9 @@ public class TouchHandler : MonoBehaviour
 {
     void Update()
     {
+        if (UIManager.Instance)
+            if (UIManager.Instance.touchBlocking) return;
+
         if (Input.GetMouseButtonDown(0))
         {
             var ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z));
@@ -16,6 +19,7 @@ public class TouchHandler : MonoBehaviour
             if (hit.collider.TryGetComponent<IInteract>(out var interact))
                 interact.Interaction();
         }
+
 
 
         // 모바일용
