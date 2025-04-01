@@ -38,6 +38,9 @@ public class UIManager : Singleton<UIManager>
 
         mail = ui.transform.GetChild(num++).gameObject;
         chapter = ui.transform.GetChild(num++).gameObject;
+        if (chapter.transform.GetChild(1).TryGetComponent<Button>(out var closeBtn))
+            closeBtn.onClick.AddListener(CloseChapter);
+
         chapterContent = chapter.GetComponentInChildren<ContentSizeFitter>().gameObject;
         
         mission = ui.transform.GetChild(num++).gameObject;
@@ -56,7 +59,6 @@ public class UIManager : Singleton<UIManager>
 
     private void HandleButtonClick(ButtonType type)
     {
-        Debug.Log("��ưŬ����" + type.ToString());
         switch(type)
         {
             case ButtonType.Slot1:
@@ -72,6 +74,13 @@ public class UIManager : Singleton<UIManager>
     {
         TouchBlock(true);
 
+        mail.transform.localScale = Vector3.zero;
+        LeanTween.moveLocal(mail, new Vector3(394f, 173f, 0), 0f);
+
+
+        LeanTween.moveLocal(mail, new Vector3(0, 0, 0), 0.3f);
+        LeanTween.scale(mail, new Vector3(1, 1, 1), 0.3f);
+
         GameManager.Instance.Blur(true);
         mail.SetActive(true);
         uiCamera.enabled = true;
@@ -81,8 +90,11 @@ public class UIManager : Singleton<UIManager>
     {
         TouchBlock(false);
 
+        LeanTween.moveLocal(mail, new Vector3(394f, 173f, 0), 0.3f);
+        LeanTween.scale(mail, new Vector3(0, 0, 0), 0.3f);
+        //mail.SetActive(false);
+
         //GameManager.Instance.Blur(false);
-        mail.SetActive(false);
         //uiCamera.enabled = false;
 
         //OpenMission();
@@ -114,6 +126,10 @@ public class UIManager : Singleton<UIManager>
 
         GameManager.Instance.Blur(true);
         mission.SetActive(true);
+
+        LeanTween.scale(mission, Vector3.zero, 0);
+        LeanTween.scale(mission, Vector3.one, 0.2f);
+        //LeanTween.move(mission, Vector3.one, 1);
         uiCamera.enabled = true;
     }
 
@@ -122,12 +138,19 @@ public class UIManager : Singleton<UIManager>
         TouchBlock(false);
 
         GameManager.Instance.Blur(false);
-        mission.SetActive(false);
-        uiCamera.enabled = false;
+        LeanTween.scale(mission, Vector3.zero, 0.2f);
+
+        //mission.SetActive(false);
+        Invoke("UICameraShutDown", 0.2f);
     }
 
     private void TouchBlock(bool tf)
     {
         touchBlocking = tf;
+    }
+
+    private void UICameraShutDown()
+    {
+        uiCamera.enabled = false;
     }
 }
