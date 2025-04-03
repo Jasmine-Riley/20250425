@@ -57,7 +57,7 @@ public class TitleSceneManager : MonoBehaviour
         //LeanTween.scale(popup, vectorZero, 0.7f).setEase(LeanTweenType.easeOutElastic);
 
 
-        welcomeText.text = hasPlayerInformation ? "시작하려면 터치하세요" : "로그인하시려면 터치하세요";
+        welcomeText.text = hasPlayerInformation ? "시작하기" : "로그인하기";
         welcomeText.enabled = true;
 
     }
