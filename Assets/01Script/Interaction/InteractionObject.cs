@@ -12,7 +12,6 @@ public class InteractionObject : MonoBehaviour, IInteract
     public void Interaction()
     {
         if (!interactable) return;
-
         OnClick?.Invoke();
     }
 
