@@ -25,10 +25,14 @@ public class InformMarker : MonoBehaviour
         canvasUI.transform.localPosition = offset;
         canvasUI.SetActive(false);
 
+
+        UIClicker iconClicker = null;
+
         if (iconPrefab)
         {
             iconUI = Instantiate(iconPrefab, transform);
             iconUI.SetActive(false);
+            iconClicker = iconUI.GetComponentInChildren<UIClicker>();
         }
 
         var tmps = canvasUI.GetComponentsInChildren<TextMeshProUGUI>();
@@ -42,24 +46,28 @@ public class InformMarker : MonoBehaviour
         line = gameObject.AddComponent<LineRenderer>();
         line.enabled = false;
 
-        line.positionCount = 2;
+        line.positionCount = 3;
         line.startWidth = 0.1f;
         line.endWidth = 0.1f;
 
         line.material = lineMaterial;
 
-        var size = transform.localScale;
-        size.x -= 0.01f;
-        size.y = 0;
-        size.z = -0.05f;
+        var size = Vector3.zero;
+        size.x = canvasUI.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta.x;
+
+        var posOffset = new Vector3(0, 0, -0.05f);
 
         if (TryGetComponent<InteractionObject>(out var interact))
+        {
+            if(iconClicker) iconClicker.OnClick += interact.Interaction;
+
             interact.OnInteractable += (tf) =>
             {
                 canvasUI.SetActive(tf);
 
                 line.SetPosition(0, transform.position);
-                line.SetPosition(1, transform.position + offset + (size * 2));
+                line.SetPosition(1, transform.position + offset - (size * 0.5f) + posOffset);
+                line.SetPosition(2, transform.position + offset + (size * 0.5f) + posOffset);
 
 
                 if (iconUI)
@@ -67,10 +75,10 @@ public class InformMarker : MonoBehaviour
                     iconUI.SetActive(tf);
                     line.SetPosition(0, transform.position + Vector3.right * iconUI.transform.GetChild(0).transform.localScale.x);
                 }
-                    
 
 
                 line.enabled = tf;
             };
+        }
     }
 }

@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    private DataManager dataManager;
     private UIManager uiManager;
     private PoolManager poolManager;
     private Volume volume;
@@ -17,12 +19,22 @@ public class GameManager : Singleton<GameManager>
 
         player = GameObject.Find("Player");
 
-        player.TryGetComponent<PlayerController>(out var p);
-        p.Init();
+        if(player.TryGetComponent<PlayerController>(out var p))
+            p.Init();
+
+        SceneManager.sceneLoaded += (scene, mode) => {
+            AssignManagers();
+            InitManagers();
+            player = GameObject.Find("Player");
+            if (!Player) return;
+            if(player.TryGetComponent<PlayerController>(out var p))
+                p.Init();
+        };
     }
 
     private void AssignManagers()
     {
+        GameObject.Find("DataManager")?.TryGetComponent<DataManager>(out dataManager);
         GameObject.Find("UIManager")?.TryGetComponent<UIManager>(out uiManager);
         GameObject.Find("PoolManager")?.TryGetComponent<PoolManager>(out poolManager);
         GameObject.Find("Global Volume")?.TryGetComponent<Volume>(out volume);
@@ -30,6 +42,7 @@ public class GameManager : Singleton<GameManager>
 
     private void InitManagers()
     {
+        dataManager?.Init();
         uiManager?.Init();
         poolManager?.Init();
     }

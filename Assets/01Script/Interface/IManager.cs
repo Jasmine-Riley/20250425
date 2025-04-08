@@ -1,5 +1,5 @@
 
 public interface IManager 
 {
-    public void InitManager();
+    public void Init();
 }
