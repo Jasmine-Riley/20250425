@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class UIClicker : MonoBehaviour, IPointerClickHandler
 {
-    protected event Action OnClick;
+    public event Action OnClick;
 
     public void OnPointerClick(PointerEventData eventData)
     {

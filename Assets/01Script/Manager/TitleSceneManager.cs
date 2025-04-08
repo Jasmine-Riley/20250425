@@ -28,7 +28,7 @@ public class TitleSceneManager : MonoBehaviour
     {
         SetPopupsScaleZero();
 
-        DataManager.Instance.InitManager();
+        DataManager.Instance.Init();
 
         InitTitleScene();
     }

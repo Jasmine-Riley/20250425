@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 // 데이터 형태는 SaveDatas.cs 참고
@@ -18,13 +19,28 @@ public class DataManager : Singleton<DataManager>, IManager
 
     public bool testSkip = false;
 
-    public void InitManager()
+
+
+    private ChatTable storyDatas;
+    private Dictionary<int, ChatData> Story = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> FindDevil = new Dictionary<int, ChatData>();
+
+
+
+    public void Init()
     {
         // '일반' 계정 불러오기
 
-        if(testSkip)
-            if (!loadData) LoadData();
+        if (testSkip)
+            if (!loadData)
+                LoadData();
+
+        if(Story.Count < 1)
+            LoadStoryData();
     }
+
+
+    #region ___LoadPlayer___
 
     public bool LoadData()
     {
@@ -66,4 +82,40 @@ public class DataManager : Singleton<DataManager>, IManager
         playerData = new PlayerData();
         playerData.nickName = nickName;
     }
+
+    #endregion
+
+    #region ___LoadStorys___
+
+    private void LoadStoryData()
+    {
+        storyDatas = Resources.Load<ChatTable>("ChatData/ChatTable");
+
+        Debug.Log("스토리불러오기");
+        for (int i = 0; i < storyDatas.Story.Count; i++)
+            Story.Add(storyDatas.Story[i].id, storyDatas.Story[i]);
+
+        for (int i = 0; i < storyDatas.FindDevil.Count; i++)
+            FindDevil.Add(storyDatas.FindDevil[i].id, storyDatas.FindDevil[i]);
+    }
+
+
+    #endregion
+
+    #region ___ReturnData___
+
+    public Dictionary<int, ChatData> GetStoryData(StoryType type)
+    {
+        switch (type)
+        {
+            case StoryType.Story:
+                return Story;
+            case StoryType.FindDevil:
+                return FindDevil;
+        }
+
+        return null;
+    }
+
+    #endregion
 }

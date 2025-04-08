@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 public enum ButtonType
 {
@@ -11,17 +11,25 @@ public enum ButtonType
 
 public class UIManager : Singleton<UIManager> 
 {
+
     private GameObject mail;
+
     private GameObject chapter;
     private GameObject chapterContent;
+
     private GameObject mission;
+
+    private GameObject chat;
+    private Image chatterImage;
+    private TextMeshProUGUI chatterNameText;
+    private TextMeshProUGUI chatText;
+
 
     private Camera uiCamera;
 
     public bool touchBlocking = false;
 
     public static event Action OnPressBtnSlot1;
-    public static event Action OnPressBtnSlot2;
 
     private GameObject obj;
 
@@ -31,8 +39,11 @@ public class UIManager : Singleton<UIManager>
     public void Init()
     {
         var ui = GameObject.Find("UI");
+        var uiCam = GameObject.Find("UI Camera");
 
-        GameObject.Find("UI Camera").TryGetComponent<Camera>(out uiCamera);
+        if (!ui) return;
+
+        uiCam.TryGetComponent<Camera>(out uiCamera);
 
         int num = 0;
 
@@ -44,6 +55,13 @@ public class UIManager : Singleton<UIManager>
         chapterContent = chapter.GetComponentInChildren<ContentSizeFitter>().gameObject;
         
         mission = ui.transform.GetChild(num++).gameObject;
+
+        chat = ui.transform.GetChild(num++).gameObject;
+        chat.transform.GetChild(0).TryGetComponent<Image>(out  chatterImage);
+        chat.transform.GetChild(1).TryGetComponent<TextMeshProUGUI>(out chatterNameText);
+        chat.transform.GetChild(2).TryGetComponent<TextMeshProUGUI>(out chatText);
+        //if (chat.transform.GetChild(3).TryGetComponent<Button>(out var skipBtn))
+        //    skipBtn.onClick.AddListener(ScenarioManager.Instance.StopStory);
 
         if (!useTouchPad) return;
 
@@ -142,6 +160,36 @@ public class UIManager : Singleton<UIManager>
 
         //mission.SetActive(false);
         Invoke("UICameraShutDown", 0.2f);
+    }
+
+    public void OpenScenarioPannel()
+    {
+        TouchBlock(true);
+
+        chat.SetActive(true);
+    }
+
+    public void CloseScenarioPannel()
+    {
+        TouchBlock(false);
+
+        chat.SetActive(false);
+    }
+
+    public void SetScenarioPannel(Sprite sprite, string name, string chat)
+    {
+        if (sprite != null) 
+        {
+            chatterImage.sprite = sprite;
+
+            chatterImage.transform.localScale = new Vector3(sprite.bounds.size.x * 0.3f, sprite.bounds.size.y * 0.3f, 0);
+            chatterImage.enabled = true;
+        }
+        else
+            chatterImage.enabled = false;
+
+        chatterNameText.text = name;
+        chatText.text = chat;
     }
 
     private void TouchBlock(bool tf)

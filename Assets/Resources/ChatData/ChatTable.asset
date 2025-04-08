@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8d667f807975d4f9b5dab594923440, type: 3}
+  m_Name: ChatTable
+  m_EditorClassIdentifier: 
+  Story:
+  - id: 0
+    imgSrc: Image/pairy
+    name: "\uC194"
+    chat: "\uC548\uB155 \uB098\uB294 \uC544\uC6B0\uC194\uC774\uC57C"
+  - id: 1
+    imgSrc: Image/stell
+    name: "\uC2A4\uD154"
+    chat: "\uB2F9\uC5F0\uD558\uC9C0"
+  FindDevil:
+  - id: 0
+    imgSrc: Image/pairy
+    name: "\uC194"
+    chat: "\uC800\uAC74.. \uBB50\uC9C0?"
+  - id: 1
+    imgSrc: Image/stell
+    name: "\uC2A4\uD154"
+    chat: "\uC5B4\uB77C??"
+  - id: 2
+    imgSrc: Image/devil1
+    name: "\uC545\uB9C8"
+    chat: I'm devil
+  - id: 3
+    imgSrc: Image/stell
+    name: "\uC2A4\uD154"
+    chat: "\uBB34\uC2A8 \uB9D0\uC778\uC9C0 \uBAA8\uB974\uACA0\uC5B4"
+  - id: 4
+    imgSrc: Image/devil2
+    name: "\uC545\uB9C8"
+    chat: "\uB07C\uC5D0\uC5D1"
+  - id: 5
+    imgSrc: Image/pairy
+    name: "\uC194"
+    chat: "\uD574\uCE58\uC6B4 \uAC83 \uAC19\uC544"
