@@ -22,8 +22,15 @@ public class DataManager : Singleton<DataManager>, IManager
 
 
     private ChatTable storyDatas;
-    private Dictionary<int, ChatData> Story = new Dictionary<int, ChatData>();
-    private Dictionary<int, ChatData> FindDevil = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> ContaminatedMushrooms = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> Virus = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> MysteriousTree = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> DollClawMachine = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> RabbitDoll = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> FoodTruck = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> FallenLeaves = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> Log = new Dictionary<int, ChatData>();
+    private Dictionary<int, ChatData> RumiHouse = new Dictionary<int, ChatData>();
 
 
 
@@ -35,7 +42,7 @@ public class DataManager : Singleton<DataManager>, IManager
             if (!loadData)
                 LoadData();
 
-        if(Story.Count < 1)
+        if(!storyDatas)
             LoadStoryData();
     }
 
@@ -92,11 +99,25 @@ public class DataManager : Singleton<DataManager>, IManager
         storyDatas = Resources.Load<ChatTable>("ChatData/ChatTable");
 
         Debug.Log("스토리불러오기");
-        for (int i = 0; i < storyDatas.Story.Count; i++)
-            Story.Add(storyDatas.Story[i].id, storyDatas.Story[i]);
 
-        for (int i = 0; i < storyDatas.FindDevil.Count; i++)
-            FindDevil.Add(storyDatas.FindDevil[i].id, storyDatas.FindDevil[i]);
+        for (int i = 0; i < storyDatas.ContaminatedMushrooms.Count; i++)
+            ContaminatedMushrooms.Add(storyDatas.ContaminatedMushrooms[i].id, storyDatas.ContaminatedMushrooms[i]);
+        for (int i = 0; i < storyDatas.Virus.Count; i++)
+            Virus.Add(storyDatas.Virus[i].id, storyDatas.Virus[i]);
+        for (int i = 0; i < storyDatas.MysteriousTree.Count; i++)
+            MysteriousTree.Add(storyDatas.MysteriousTree[i].id, storyDatas.MysteriousTree[i]);
+        for (int i = 0; i < storyDatas.DollClawMachine.Count; i++)
+            DollClawMachine.Add(storyDatas.DollClawMachine[i].id, storyDatas.DollClawMachine[i]);
+        for (int i = 0; i < storyDatas.RabbitDoll.Count; i++)
+            RabbitDoll.Add(storyDatas.RabbitDoll[i].id, storyDatas.RabbitDoll[i]);
+        for (int i = 0; i < storyDatas.FoodTruck.Count; i++)
+            FoodTruck.Add(storyDatas.FoodTruck[i].id, storyDatas.FoodTruck[i]);
+        for (int i = 0; i < storyDatas.FallenLeaves.Count; i++)
+            FallenLeaves.Add(storyDatas.FallenLeaves[i].id, storyDatas.FallenLeaves[i]);
+        for (int i = 0; i < storyDatas.Log.Count; i++)
+            Log.Add(storyDatas.Log[i].id, storyDatas.Log[i]);
+        for (int i = 0; i < storyDatas.RumiHouse.Count; i++)
+            RumiHouse.Add(storyDatas.RumiHouse[i].id, storyDatas.RumiHouse[i]);
     }
 
 
@@ -108,10 +129,15 @@ public class DataManager : Singleton<DataManager>, IManager
     {
         switch (type)
         {
-            case StoryType.Story:
-                return Story;
-            case StoryType.FindDevil:
-                return FindDevil;
+                case StoryType.                 ContaminatedMushrooms               :     return ContaminatedMushrooms;
+                case StoryType.                 Virus                               :     return Virus;
+                case StoryType.                 MysteriousTree                      :     return MysteriousTree;
+                case StoryType.                 DollClawMachine                     :     return DollClawMachine;
+                case StoryType.                 RabbitDoll                          :     return RabbitDoll;
+                case StoryType.                 FoodTruck                           :     return FoodTruck;
+                case StoryType.                 FallenLeaves                        :     return FallenLeaves;
+                case StoryType.                 Log                                 :     return Log;
+                case StoryType.                 RumiHouse                           :     return RumiHouse;
         }
 
         return null;

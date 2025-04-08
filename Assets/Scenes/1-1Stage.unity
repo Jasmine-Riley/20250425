@@ -2060,7 +2060,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Story
+          m_StringArgument: RabbitDoll
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!135 &673063803
@@ -4264,7 +4264,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FindDevil
+          m_StringArgument: Virus
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1349594792
@@ -4715,7 +4715,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -6193,7 +6193,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9/\uB300\uD654\uB0B4\uC6A9"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f52144019b3b3ea41b2ac4d0379c69e5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b81f13d988264ea4d897a7cddfca65db, type: 2}
   m_sharedMaterial: {fileID: 1387561196536909678, guid: f52144019b3b3ea41b2ac4d0379c69e5,
     type: 2}
   m_fontSharedMaterials: []
@@ -6258,7 +6258,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2007091424

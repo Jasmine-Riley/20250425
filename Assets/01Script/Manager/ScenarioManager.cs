@@ -9,15 +9,18 @@ public class ScenarioManager : SingletonDestroy<ScenarioManager>
 
     public void StartStory(string typeName)
     {
-        var type = StoryType.Story;
+        var type = StoryType.ContaminatedMushrooms;
         switch (typeName)
         {
-            case "Story":
-                type = StoryType.Story;
-                break;
-            case "FindDevil":
-                type = StoryType.FindDevil;
-                break;
+            case "ContaminatedMushrooms": type = StoryType.ContaminatedMushrooms     ;             break;
+            case "Virus                ": type = StoryType.Virus                     ;             break;
+            case "MysteriousTree       ": type = StoryType.MysteriousTree            ;             break;
+            case "DollClawMachine      ": type = StoryType.DollClawMachine           ;             break;
+            case "RabbitDoll           ": type = StoryType.RabbitDoll                ;             break;
+            case "FoodTruck            ": type = StoryType.FoodTruck                 ;             break;
+            case "FallenLeaves         ": type = StoryType.FallenLeaves              ;             break;
+            case "Log                  ": type = StoryType.Log                       ;             break;
+            case "RumiHouse            ": type = StoryType.RumiHouse                 ;             break;
             default:
                 break;
         }
