@@ -31,4 +31,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             movement.Jump();
     }
+
+    public void RemoveButtonInteraction()
+    {
+        UIManager.OnPressBtnSlot1 -= movement.Jump;
+    }
 }

@@ -19,8 +19,8 @@ public class GameManager : Singleton<GameManager>
 
         player = GameObject.Find("Player");
 
-        if(player.TryGetComponent<PlayerController>(out var p))
-            p.Init();
+        //if(player.TryGetComponent<PlayerController>(out var p))
+        //    p.Init();
 
         SceneManager.sceneLoaded += (scene, mode) => {
             AssignManagers();
