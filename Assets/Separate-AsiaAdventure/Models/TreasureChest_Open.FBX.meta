@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 970e9d013c2de6b46b7824bfcd4c699f
+timeCreated: 1436029164
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Coinr006
+    100002: Coinr007
+    100004: Coinr008
+    100006: Coinr011
+    100008: Coinr012
+    100010: Coinr013
+    100012: Coinr015
+    100014: Coinrr004
+    100016: Coinrr005
+    100018: Coinrr009
+    100020: Coinrr010
+    100022: Coinrr014
+    100024: Gem11
+    100026: Gem12
+    100028: Gem13
+    100030: Gold443
+    100032: Gold79
+    100034: Gold80
+    100036: Ruby123
+    100038: Ruby227
+    100040: Saphire22
+    100042: Saphire41
+    100044: TreasureChest_Lid
+    100046: //RootNode
+    400000: Coinr006
+    400002: Coinr007
+    400004: Coinr008
+    400006: Coinr011
+    400008: Coinr012
+    400010: Coinr013
+    400012: Coinr015
+    400014: Coinrr004
+    400016: Coinrr005
+    400018: Coinrr009
+    400020: Coinrr010
+    400022: Coinrr014
+    400024: Gem11
+    400026: Gem12
+    400028: Gem13
+    400030: Gold443
+    400032: Gold79
+    400034: Gold80
+    400036: Ruby123
+    400038: Ruby227
+    400040: Saphire22
+    400042: Saphire41
+    400044: TreasureChest_Lid
+    400046: //RootNode
+    2300000: Coinr006
+    2300002: Coinr007
+    2300004: Coinr008
+    2300006: Coinr011
+    2300008: Coinr012
+    2300010: Coinr013
+    2300012: Coinr015
+    2300014: Coinrr004
+    2300016: Coinrr005
+    2300018: Coinrr009
+    2300020: Coinrr010
+    2300022: Coinrr014
+    2300024: Gem11
+    2300026: Gem12
+    2300028: Gem13
+    2300030: Gold443
+    2300032: Gold79
+    2300034: Gold80
+    2300036: Ruby123
+    2300038: Ruby227
+    2300040: Saphire22
+    2300042: Saphire41
+    2300044: TreasureChest_Lid
+    2300046: //RootNode
+    3300000: Coinr006
+    3300002: Coinr007
+    3300004: Coinr008
+    3300006: Coinr011
+    3300008: Coinr012
+    3300010: Coinr013
+    3300012: Coinr015
+    3300014: Coinrr004
+    3300016: Coinrr005
+    3300018: Coinrr009
+    3300020: Coinrr010
+    3300022: Coinrr014
+    3300024: Gem11
+    3300026: Gem12
+    3300028: Gem13
+    3300030: Gold443
+    3300032: Gold79
+    3300034: Gold80
+    3300036: Ruby123
+    3300038: Ruby227
+    3300040: Saphire22
+    3300042: Saphire41
+    3300044: TreasureChest_Lid
+    3300046: //RootNode
+    4300000: TreasureChest_Open
+    4300002: Gem11
+    4300004: Coinr015
+    4300006: Coinrr014
+    4300008: Coinr013
+    4300010: Coinr012
+    4300012: Coinr011
+    4300014: Coinrr010
+    4300016: Coinrr009
+    4300018: Coinr008
+    4300020: Gold80
+    4300022: Coinr007
+    4300024: Coinr006
+    4300026: Gold79
+    4300028: Saphire41
+    4300030: Gem12
+    4300032: Coinrr005
+    4300034: Ruby227
+    4300036: Gold443
+    4300038: Saphire22
+    4300040: Gem13
+    4300042: Ruby123
+    4300044: Coinrr004
+    4300046: TreasureChest_Lid
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

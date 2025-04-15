@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 0beab43312842974db0b80bc16a7378e
+timeCreated: 1436001945
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: AnimateWater
+    100002: LakeSurface
+    100004: Line229
+    100006: Line234
+    100008: Line238
+    100010: MossMountain231
+    100012: MossMountain232
+    100014: MossMountain233
+    100016: MossMountain243
+    100018: MossMountain244
+    100020: Object679
+    100022: Object683
+    100024: plants
+    100026: WaterFall001
+    100028: //RootNode
+    100030: WaterFlow
+    400000: AnimateWater
+    400002: LakeSurface
+    400004: Line229
+    400006: Line234
+    400008: Line238
+    400010: MossMountain231
+    400012: MossMountain232
+    400014: MossMountain233
+    400016: MossMountain243
+    400018: MossMountain244
+    400020: Object679
+    400022: Object683
+    400024: plants
+    400026: WaterFall001
+    400028: //RootNode
+    400030: WaterFlow
+    2300000: AnimateWater
+    2300002: LakeSurface
+    2300004: Line229
+    2300006: Line234
+    2300008: Line238
+    2300010: MossMountain231
+    2300012: MossMountain232
+    2300014: MossMountain233
+    2300016: MossMountain243
+    2300018: MossMountain244
+    2300020: Object679
+    2300022: Object683
+    2300024: plants
+    2300026: WaterFall001
+    2300028: //RootNode
+    2300030: WaterFlow
+    3300000: AnimateWater
+    3300002: LakeSurface
+    3300004: Line229
+    3300006: Line234
+    3300008: Line238
+    3300010: MossMountain231
+    3300012: MossMountain232
+    3300014: MossMountain233
+    3300016: MossMountain243
+    3300018: MossMountain244
+    3300020: Object679
+    3300022: Object683
+    3300024: plants
+    3300026: WaterFall001
+    3300028: //RootNode
+    3300030: WaterFlow
+    4300000: moss28
+    4300002: Line229
+    4300004: MossMountain231
+    4300006: MossMountain232
+    4300008: MossMountain233
+    4300010: Line234
+    4300012: Line238
+    4300014: Object683
+    4300016: plants
+    4300018: MossMountain244
+    4300020: Object679
+    4300022: MossMountain243
+    4300024: WaterFlow
+    4300026: AnimateWater
+    4300028: LakeSurface
+    4300030: WaterFall001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
