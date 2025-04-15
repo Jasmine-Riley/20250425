@@ -1,0 +1,2935 @@
+fileFormatVersion: 2
+guid: 23050b2b2c510c2448bcac6c4bd20d1a
+timeCreated: 1436194748
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 325345
+    100002: 333
+    100004: 444
+    100006: 47
+    100008: 67
+    100010: 9785
+    100012: //RootNode
+    100014: AnimateWater
+    100016: Barrel1573
+    100018: Base161
+    100020: Base220
+    100022: BearTrap001
+    100024: BearTrap002
+    100026: BearTrap003
+    100028: BearTrap004
+    100030: BearTrap_L001
+    100032: BearTrap_L002
+    100034: BearTrap_L003
+    100036: BearTrap_L004
+    100038: BearTrap_R001
+    100040: BearTrap_R002
+    100042: BearTrap_R003
+    100044: BearTrap_R004
+    100046: BearTrap_Screw001
+    100048: BearTrap_Screw002
+    100050: BearTrap_Screw003
+    100052: BearTrap_Screw004
+    100054: BigIsle
+    100056: Bone013
+    100058: Bone014
+    100060: Bone015
+    100062: Bone016
+    100064: Bone017
+    100066: Bone018
+    100068: Bone019
+    100070: Bone020
+    100072: Bone021
+    100074: Bone022
+    100076: Bone023
+    100078: Bone024
+    100080: Bone025
+    100082: Bone026
+    100084: Bone027
+    100086: Bone028
+    100088: Bone029
+    100090: Bone030
+    100092: Bone031
+    100094: Bone032
+    100096: Bone033
+    100098: Bone034
+    100100: Bone035
+    100102: Bone036
+    100104: Bone037
+    100106: Bone038
+    100108: Bone039
+    100110: Bone040
+    100112: Bone041
+    100114: Bone042
+    100116: Bone043
+    100118: Bone044
+    100120: Bone045
+    100122: Bone046
+    100124: Bone047
+    100126: Bone048
+    100128: Bone049
+    100130: Bone050
+    100132: Bone051
+    100134: Bone052
+    100136: Bone053
+    100138: Bone054
+    100140: Bone055
+    100142: Bone056
+    100144: Bone057
+    100146: Bone058
+    100148: Bone059
+    100150: Bone060
+    100152: Box093
+    100154: Box215
+    100156: Box221
+    100158: Box293
+    100160: Box295
+    100162: Box296
+    100164: Box297
+    100166: Box298
+    100168: Box397
+    100170: BrighTone
+    100172: Brightone222A
+    100174: Bush2012
+    100176: Bush2157
+    100178: Bush616
+    100180: Bush_007
+    100182: Bush_008
+    100184: Bush_009
+    100186: Bush_010
+    100188: Bush_011
+    100190: Bush_012
+    100192: Bush_013
+    100194: Bush_014
+    100196: Color_Plane001
+    100198: Cot
+    100200: Cylinder034
+    100202: Fence010
+    100204: Fence797
+    100206: FireCoal_LOD_004
+    100208: FireCoal_LOD_031
+    100210: FireCoal_LOD_039
+    100212: FireCoal_LOD_041
+    100214: FireCoal_LOD_047
+    100216: FireCoal_LOD_049
+    100218: FireCoal_LOD_052
+    100220: Flag
+    100222: Flag001
+    100224: Flag002
+    100226: Flag003
+    100228: Flower2053
+    100230: GiantTree_003
+    100232: GiantTree_004
+    100234: GiantTree_005
+    100236: GiantTree_006
+    100238: GoldenPalace
+    100240: Grass_07a001
+    100242: Grass_07a002
+    100244: Grass_07a003
+    100246: Grass_07a004
+    100248: Grass_07a005
+    100250: Grass_07a006
+    100252: Grass_07a007
+    100254: Grass_07b001
+    100256: Grass_07b002
+    100258: Grass_07b003
+    100260: Grass_07b004
+    100262: Group038
+    100264: Group039
+    100266: Group040
+    100268: Group041
+    100270: Group042
+    100272: Group043
+    100274: Group044
+    100276: Group045
+    100278: Group046
+    100280: Group047
+    100282: Group048
+    100284: Group049
+    100286: Group050
+    100288: Group051
+    100290: Islande2039
+    100292: Islande2040
+    100294: IslandRoot
+    100296: Isle169
+    100298: Isle180
+    100300: Lake
+    100302: LakeSurface
+    100304: Line229
+    100306: Line234
+    100308: Line238
+    100310: Line347
+    100312: Line349
+    100314: Line417
+    100316: Line440
+    100318: Line442
+    100320: Line445
+    100322: Line470
+    100324: Line479
+    100326: Line480
+    100328: Line481
+    100330: Line483
+    100332: Line484
+    100334: Line485
+    100336: Line494
+    100338: Line495
+    100340: Line496
+    100342: Line497
+    100344: Line572
+    100346: Line596
+    100348: Line597
+    100350: Line598
+    100352: Line599
+    100354: Line605
+    100356: Line623
+    100358: Line624
+    100360: Line625
+    100362: Line626
+    100364: Line627
+    100366: M441
+    100368: M444
+    100370: M623
+    100372: Mace001
+    100374: Mace002
+    100376: Mace003
+    100378: Mace004
+    100380: MaceTrap_Frame001
+    100382: MaceTrap_Frame002
+    100384: MaceTrap_Frame003
+    100386: MaceTrap_Frame004
+    100388: MazeWallt2149
+    100390: moss28
+    100392: MossMountain231
+    100394: MossMountain232
+    100396: MossMountain233
+    100398: MossMountain243
+    100400: MossMountain244
+    100402: Mountain
+    100404: Mountain459
+    100406: Mountain460
+    100408: Mountain462
+    100410: Mountain463
+    100412: Mountain464
+    100414: Mountain465
+    100416: Mountain466
+    100418: Mountain_01
+    100420: Mountain_53
+    100422: Mountain_755
+    100424: Mountain_756
+    100426: Mountainrange440
+    100428: Mountainrange441
+    100430: Object001
+    100432: Object002
+    100434: Object1011
+    100436: Object1012
+    100438: Object1013
+    100440: Object1014
+    100442: Object1016
+    100444: Object1448
+    100446: Object1449
+    100448: Object1451
+    100450: Object1542
+    100452: Object1543
+    100454: Object1544
+    100456: Object1545
+    100458: Object1546
+    100460: Object1547
+    100462: Object1548
+    100464: Object1550
+    100466: Object1551
+    100468: Object1552
+    100470: Object1553
+    100472: Object1554
+    100474: Object1555
+    100476: Object1556
+    100478: Object1557
+    100480: Object1558
+    100482: Object1559
+    100484: Object1560
+    100486: Object1561
+    100488: Object1582
+    100490: Object1583
+    100492: Object1593
+    100494: Object1594
+    100496: Object1595
+    100498: Object1596
+    100500: Object1597
+    100502: Object1600
+    100504: Object1601
+    100506: Object1602
+    100508: Object1603
+    100510: Object1621
+    100512: Object1632
+    100514: Object1634
+    100516: Object1635
+    100518: Object1636
+    100520: Object1637
+    100522: Object1638
+    100524: Object1639
+    100526: Object1737
+    100528: Object1812
+    100530: Object1813
+    100532: Object1818
+    100534: Object1825
+    100536: Object1838
+    100538: Object1839
+    100540: Object1840
+    100542: Object1841
+    100544: Object1842
+    100546: Object1844
+    100548: Object1863
+    100550: Object1876
+    100552: Object1884
+    100554: Object1945
+    100556: Object1950
+    100558: Object1956
+    100560: Object1957
+    100562: Object1958
+    100564: Object1972
+    100566: Object1973
+    100568: Object1974
+    100570: Object1979
+    100572: Object1980
+    100574: Object1981
+    100576: Object2004
+    100578: Object2006
+    100580: Object2032
+    100582: Object2040
+    100584: Object2041
+    100586: Object2042
+    100588: Object2044
+    100590: Object2087
+    100592: Object2088
+    100594: Object2089
+    100596: Object2091
+    100598: Object2150
+    100600: Object2151
+    100602: Object2152
+    100604: Object2155
+    100606: Object2156
+    100608: Object2157
+    100610: Object2158
+    100612: Object2159
+    100614: Object2160
+    100616: Object2162
+    100618: Object2163
+    100620: Object679
+    100622: Object683
+    100624: Object751
+    100626: Object754
+    100628: Object764
+    100630: Object796
+    100632: Object801
+    100634: Object802
+    100636: Object862
+    100638: Object863
+    100640: Object973
+    100642: Particle View 001
+    100644: PillarRoad
+    100646: Pine486
+    100648: Pinetree19
+    100650: Pinetree20
+    100652: Pinetree22
+    100654: Pinetree418
+    100656: Pinetree475
+    100658: PineTRee82
+    100660: Pinetreee416
+    100662: PinkTree376
+    100664: PinkTRee551
+    100666: PinkTree_005
+    100668: PinkTree_006
+    100670: PinkTree_007
+    100672: Plane052
+    100674: Plane182
+    100676: Plane223
+    100678: Plane224
+    100680: Plane233
+    100682: Plane267
+    100684: Plane294
+    100686: plants
+    100688: Portal_004
+    100690: Portal_005
+    100692: RandomIsle_05
+    100694: RedGate001
+    100696: RedGate434
+    100698: RedHouse
+    100700: REed
+    100702: Reed
+    100704: Reed 1
+    100706: Rock0092
+    100708: Rock1768
+    100710: Rock1769
+    100712: Rock1771
+    100714: Rock4007
+    100716: Rock786
+    100718: Rockteam225
+    100720: SedanChair_004
+    100722: SedanChair_005
+    100724: SedanChair_006
+    100726: SedanChair_007
+    100728: SedanChair_008
+    100730: SedanChair_009
+    100732: Small_Island_078
+    100734: SpikeBase001
+    100736: SpikeBase002
+    100738: SpikeBase003
+    100740: SpikeBase004
+    100742: SpikeBase005
+    100744: SpikeBase006
+    100746: SpikeTrap001
+    100748: SpikeTrap002
+    100750: SpikeTrap003
+    100752: SpikeTrap004
+    100754: SpikeTrap005
+    100756: SpikeTrap006
+    100758: SpikeTrap007
+    100760: SpikeTrap008
+    100762: SpikeTrap009
+    100764: SpikeTrap010
+    100766: SpikeTrap011
+    100768: SpikeTrap012
+    100770: SpringTrap001
+    100772: SpringTrap002
+    100774: SpringTrap003
+    100776: SpringTrap004
+    100778: SpringTrap005
+    100780: SpringTrap006
+    100782: SpringTrap_part003
+    100784: SpringTrap_part004
+    100786: SpringTrap_part005
+    100788: SpringTrap_part006
+    100790: SpringTrap_part007
+    100792: SpringTrap_part008
+    100794: SpringTrap_part009
+    100796: SpringTrap_part010
+    100798: SpringTrap_part011
+    100800: SpringTrap_part012
+    100802: SpringTrap_part013
+    100804: SpringTrap_part014
+    100806: SwingingMaceTrap001
+    100808: SwingingMaceTrap002
+    100810: SwingingMaceTrap003
+    100812: SwingingMaceTrap004
+    100814: Treasure343
+    100816: Treasure344
+    100818: Treasure345
+    100820: Treasure346
+    100822: Treasure347
+    100824: Treasure348
+    100826: Treasure349
+    100828: Treasure350
+    100830: TreauserChest438
+    100832: Tree
+    100834: Tree_01d001
+    100836: Tree_02b001
+    100838: Tree_02c001
+    100840: Trees156
+    100842: Vine_003
+    100844: Vine_004
+    100846: Vine_005
+    100848: Vine_006
+    100850: Vine_007
+    100852: Wall_Pillar_013
+    100854: Wall_Pillar_028
+    100856: Wall_Pillar_029
+    100858: Wall_Pillar_030
+    100860: Wall_Pillar_031
+    100862: Wall_Pillar_032
+    100864: Wall_Pillar_033
+    100866: Wall_Pillar_034
+    100868: Wall_Pillar_035
+    100870: Wall_Pillar_036
+    100872: Wall_Pillar_037
+    100874: Water
+    100876: water
+    100878: waterfall
+    100880: WaterFall001
+    100882: WaterFlow
+    100884: Waterflow2
+    100886: waterflow2
+    100888: waterhalo
+    100890: waterhalo2
+    100892: z001
+    400000: 325345
+    400002: 333
+    400004: 444
+    400006: 47
+    400008: 67
+    400010: 9785
+    400012: //RootNode
+    400014: AnimateWater
+    400016: Barrel1573
+    400018: Base161
+    400020: Base220
+    400022: BearTrap001
+    400024: BearTrap002
+    400026: BearTrap003
+    400028: BearTrap004
+    400030: BearTrap_L001
+    400032: BearTrap_L002
+    400034: BearTrap_L003
+    400036: BearTrap_L004
+    400038: BearTrap_R001
+    400040: BearTrap_R002
+    400042: BearTrap_R003
+    400044: BearTrap_R004
+    400046: BearTrap_Screw001
+    400048: BearTrap_Screw002
+    400050: BearTrap_Screw003
+    400052: BearTrap_Screw004
+    400054: BigIsle
+    400056: Bone013
+    400058: Bone014
+    400060: Bone015
+    400062: Bone016
+    400064: Bone017
+    400066: Bone018
+    400068: Bone019
+    400070: Bone020
+    400072: Bone021
+    400074: Bone022
+    400076: Bone023
+    400078: Bone024
+    400080: Bone025
+    400082: Bone026
+    400084: Bone027
+    400086: Bone028
+    400088: Bone029
+    400090: Bone030
+    400092: Bone031
+    400094: Bone032
+    400096: Bone033
+    400098: Bone034
+    400100: Bone035
+    400102: Bone036
+    400104: Bone037
+    400106: Bone038
+    400108: Bone039
+    400110: Bone040
+    400112: Bone041
+    400114: Bone042
+    400116: Bone043
+    400118: Bone044
+    400120: Bone045
+    400122: Bone046
+    400124: Bone047
+    400126: Bone048
+    400128: Bone049
+    400130: Bone050
+    400132: Bone051
+    400134: Bone052
+    400136: Bone053
+    400138: Bone054
+    400140: Bone055
+    400142: Bone056
+    400144: Bone057
+    400146: Bone058
+    400148: Bone059
+    400150: Bone060
+    400152: Box093
+    400154: Box215
+    400156: Box221
+    400158: Box293
+    400160: Box295
+    400162: Box296
+    400164: Box297
+    400166: Box298
+    400168: Box397
+    400170: BrighTone
+    400172: Brightone222A
+    400174: Bush2012
+    400176: Bush2157
+    400178: Bush616
+    400180: Bush_007
+    400182: Bush_008
+    400184: Bush_009
+    400186: Bush_010
+    400188: Bush_011
+    400190: Bush_012
+    400192: Bush_013
+    400194: Bush_014
+    400196: Color_Plane001
+    400198: Cot
+    400200: Cylinder034
+    400202: Fence010
+    400204: Fence797
+    400206: FireCoal_LOD_004
+    400208: FireCoal_LOD_031
+    400210: FireCoal_LOD_039
+    400212: FireCoal_LOD_041
+    400214: FireCoal_LOD_047
+    400216: FireCoal_LOD_049
+    400218: FireCoal_LOD_052
+    400220: Flag
+    400222: Flag001
+    400224: Flag002
+    400226: Flag003
+    400228: Flower2053
+    400230: GiantTree_003
+    400232: GiantTree_004
+    400234: GiantTree_005
+    400236: GiantTree_006
+    400238: GoldenPalace
+    400240: Grass_07a001
+    400242: Grass_07a002
+    400244: Grass_07a003
+    400246: Grass_07a004
+    400248: Grass_07a005
+    400250: Grass_07a006
+    400252: Grass_07a007
+    400254: Grass_07b001
+    400256: Grass_07b002
+    400258: Grass_07b003
+    400260: Grass_07b004
+    400262: Group038
+    400264: Group039
+    400266: Group040
+    400268: Group041
+    400270: Group042
+    400272: Group043
+    400274: Group044
+    400276: Group045
+    400278: Group046
+    400280: Group047
+    400282: Group048
+    400284: Group049
+    400286: Group050
+    400288: Group051
+    400290: Islande2039
+    400292: Islande2040
+    400294: IslandRoot
+    400296: Isle169
+    400298: Isle180
+    400300: Lake
+    400302: LakeSurface
+    400304: Line229
+    400306: Line234
+    400308: Line238
+    400310: Line347
+    400312: Line349
+    400314: Line417
+    400316: Line440
+    400318: Line442
+    400320: Line445
+    400322: Line470
+    400324: Line479
+    400326: Line480
+    400328: Line481
+    400330: Line483
+    400332: Line484
+    400334: Line485
+    400336: Line494
+    400338: Line495
+    400340: Line496
+    400342: Line497
+    400344: Line572
+    400346: Line596
+    400348: Line597
+    400350: Line598
+    400352: Line599
+    400354: Line605
+    400356: Line623
+    400358: Line624
+    400360: Line625
+    400362: Line626
+    400364: Line627
+    400366: M441
+    400368: M444
+    400370: M623
+    400372: Mace001
+    400374: Mace002
+    400376: Mace003
+    400378: Mace004
+    400380: MaceTrap_Frame001
+    400382: MaceTrap_Frame002
+    400384: MaceTrap_Frame003
+    400386: MaceTrap_Frame004
+    400388: MazeWallt2149
+    400390: moss28
+    400392: MossMountain231
+    400394: MossMountain232
+    400396: MossMountain233
+    400398: MossMountain243
+    400400: MossMountain244
+    400402: Mountain
+    400404: Mountain459
+    400406: Mountain460
+    400408: Mountain462
+    400410: Mountain463
+    400412: Mountain464
+    400414: Mountain465
+    400416: Mountain466
+    400418: Mountain_01
+    400420: Mountain_53
+    400422: Mountain_755
+    400424: Mountain_756
+    400426: Mountainrange440
+    400428: Mountainrange441
+    400430: Object001
+    400432: Object002
+    400434: Object1011
+    400436: Object1012
+    400438: Object1013
+    400440: Object1014
+    400442: Object1016
+    400444: Object1448
+    400446: Object1449
+    400448: Object1451
+    400450: Object1542
+    400452: Object1543
+    400454: Object1544
+    400456: Object1545
+    400458: Object1546
+    400460: Object1547
+    400462: Object1548
+    400464: Object1550
+    400466: Object1551
+    400468: Object1552
+    400470: Object1553
+    400472: Object1554
+    400474: Object1555
+    400476: Object1556
+    400478: Object1557
+    400480: Object1558
+    400482: Object1559
+    400484: Object1560
+    400486: Object1561
+    400488: Object1582
+    400490: Object1583
+    400492: Object1593
+    400494: Object1594
+    400496: Object1595
+    400498: Object1596
+    400500: Object1597
+    400502: Object1600
+    400504: Object1601
+    400506: Object1602
+    400508: Object1603
+    400510: Object1621
+    400512: Object1632
+    400514: Object1634
+    400516: Object1635
+    400518: Object1636
+    400520: Object1637
+    400522: Object1638
+    400524: Object1639
+    400526: Object1737
+    400528: Object1812
+    400530: Object1813
+    400532: Object1818
+    400534: Object1825
+    400536: Object1838
+    400538: Object1839
+    400540: Object1840
+    400542: Object1841
+    400544: Object1842
+    400546: Object1844
+    400548: Object1863
+    400550: Object1876
+    400552: Object1884
+    400554: Object1945
+    400556: Object1950
+    400558: Object1956
+    400560: Object1957
+    400562: Object1958
+    400564: Object1972
+    400566: Object1973
+    400568: Object1974
+    400570: Object1979
+    400572: Object1980
+    400574: Object1981
+    400576: Object2004
+    400578: Object2006
+    400580: Object2032
+    400582: Object2040
+    400584: Object2041
+    400586: Object2042
+    400588: Object2044
+    400590: Object2087
+    400592: Object2088
+    400594: Object2089
+    400596: Object2091
+    400598: Object2150
+    400600: Object2151
+    400602: Object2152
+    400604: Object2155
+    400606: Object2156
+    400608: Object2157
+    400610: Object2158
+    400612: Object2159
+    400614: Object2160
+    400616: Object2162
+    400618: Object2163
+    400620: Object679
+    400622: Object683
+    400624: Object751
+    400626: Object754
+    400628: Object764
+    400630: Object796
+    400632: Object801
+    400634: Object802
+    400636: Object862
+    400638: Object863
+    400640: Object973
+    400642: Particle View 001
+    400644: PillarRoad
+    400646: Pine486
+    400648: Pinetree19
+    400650: Pinetree20
+    400652: Pinetree22
+    400654: Pinetree418
+    400656: Pinetree475
+    400658: PineTRee82
+    400660: Pinetreee416
+    400662: PinkTree376
+    400664: PinkTRee551
+    400666: PinkTree_005
+    400668: PinkTree_006
+    400670: PinkTree_007
+    400672: Plane052
+    400674: Plane182
+    400676: Plane223
+    400678: Plane224
+    400680: Plane233
+    400682: Plane267
+    400684: Plane294
+    400686: plants
+    400688: Portal_004
+    400690: Portal_005
+    400692: RandomIsle_05
+    400694: RedGate001
+    400696: RedGate434
+    400698: RedHouse
+    400700: REed
+    400702: Reed
+    400704: Reed 1
+    400706: Rock0092
+    400708: Rock1768
+    400710: Rock1769
+    400712: Rock1771
+    400714: Rock4007
+    400716: Rock786
+    400718: Rockteam225
+    400720: SedanChair_004
+    400722: SedanChair_005
+    400724: SedanChair_006
+    400726: SedanChair_007
+    400728: SedanChair_008
+    400730: SedanChair_009
+    400732: Small_Island_078
+    400734: SpikeBase001
+    400736: SpikeBase002
+    400738: SpikeBase003
+    400740: SpikeBase004
+    400742: SpikeBase005
+    400744: SpikeBase006
+    400746: SpikeTrap001
+    400748: SpikeTrap002
+    400750: SpikeTrap003
+    400752: SpikeTrap004
+    400754: SpikeTrap005
+    400756: SpikeTrap006
+    400758: SpikeTrap007
+    400760: SpikeTrap008
+    400762: SpikeTrap009
+    400764: SpikeTrap010
+    400766: SpikeTrap011
+    400768: SpikeTrap012
+    400770: SpringTrap001
+    400772: SpringTrap002
+    400774: SpringTrap003
+    400776: SpringTrap004
+    400778: SpringTrap005
+    400780: SpringTrap006
+    400782: SpringTrap_part003
+    400784: SpringTrap_part004
+    400786: SpringTrap_part005
+    400788: SpringTrap_part006
+    400790: SpringTrap_part007
+    400792: SpringTrap_part008
+    400794: SpringTrap_part009
+    400796: SpringTrap_part010
+    400798: SpringTrap_part011
+    400800: SpringTrap_part012
+    400802: SpringTrap_part013
+    400804: SpringTrap_part014
+    400806: SwingingMaceTrap001
+    400808: SwingingMaceTrap002
+    400810: SwingingMaceTrap003
+    400812: SwingingMaceTrap004
+    400814: Treasure343
+    400816: Treasure344
+    400818: Treasure345
+    400820: Treasure346
+    400822: Treasure347
+    400824: Treasure348
+    400826: Treasure349
+    400828: Treasure350
+    400830: TreauserChest438
+    400832: Tree
+    400834: Tree_01d001
+    400836: Tree_02b001
+    400838: Tree_02c001
+    400840: Trees156
+    400842: Vine_003
+    400844: Vine_004
+    400846: Vine_005
+    400848: Vine_006
+    400850: Vine_007
+    400852: Wall_Pillar_013
+    400854: Wall_Pillar_028
+    400856: Wall_Pillar_029
+    400858: Wall_Pillar_030
+    400860: Wall_Pillar_031
+    400862: Wall_Pillar_032
+    400864: Wall_Pillar_033
+    400866: Wall_Pillar_034
+    400868: Wall_Pillar_035
+    400870: Wall_Pillar_036
+    400872: Wall_Pillar_037
+    400874: Water
+    400876: water
+    400878: waterfall
+    400880: WaterFall001
+    400882: WaterFlow
+    400884: Waterflow2
+    400886: waterflow2
+    400888: waterhalo
+    400890: waterhalo2
+    400892: z001
+    2300000: 325345
+    2300002: 333
+    2300004: 444
+    2300006: 47
+    2300008: 67
+    2300010: 9785
+    2300012: AnimateWater
+    2300014: Barrel1573
+    2300016: Base161
+    2300018: Base220
+    2300020: BearTrap_Screw001
+    2300022: BearTrap_Screw002
+    2300024: BearTrap_Screw003
+    2300026: BearTrap_Screw004
+    2300028: BigIsle
+    2300030: Box093
+    2300032: Box215
+    2300034: Box221
+    2300036: Box293
+    2300038: Box295
+    2300040: Box296
+    2300042: Box297
+    2300044: Box298
+    2300046: Box397
+    2300048: BrighTone
+    2300050: Brightone222A
+    2300052: Bush2012
+    2300054: Bush2157
+    2300056: Bush616
+    2300058: Bush_007
+    2300060: Bush_008
+    2300062: Bush_009
+    2300064: Bush_010
+    2300066: Bush_011
+    2300068: Bush_012
+    2300070: Bush_013
+    2300072: Bush_014
+    2300074: Color_Plane001
+    2300076: Cot
+    2300078: Cylinder034
+    2300080: Fence010
+    2300082: Fence797
+    2300084: FireCoal_LOD_004
+    2300086: FireCoal_LOD_031
+    2300088: FireCoal_LOD_039
+    2300090: FireCoal_LOD_041
+    2300092: FireCoal_LOD_047
+    2300094: FireCoal_LOD_049
+    2300096: FireCoal_LOD_052
+    2300098: Flag
+    2300100: Flag001
+    2300102: Flag002
+    2300104: Flag003
+    2300106: Flower2053
+    2300108: GiantTree_003
+    2300110: GiantTree_004
+    2300112: GiantTree_005
+    2300114: GiantTree_006
+    2300116: GoldenPalace
+    2300118: Grass_07a001
+    2300120: Grass_07a002
+    2300122: Grass_07a003
+    2300124: Grass_07a004
+    2300126: Grass_07a005
+    2300128: Grass_07a006
+    2300130: Grass_07a007
+    2300132: Grass_07b001
+    2300134: Grass_07b002
+    2300136: Grass_07b003
+    2300138: Grass_07b004
+    2300140: Islande2039
+    2300142: Islande2040
+    2300144: IslandRoot
+    2300146: Isle169
+    2300148: Isle180
+    2300150: Lake
+    2300152: LakeSurface
+    2300154: Line229
+    2300156: Line234
+    2300158: Line238
+    2300160: Line347
+    2300162: Line349
+    2300164: Line417
+    2300166: Line440
+    2300168: Line442
+    2300170: Line445
+    2300172: Line470
+    2300174: Line479
+    2300176: Line480
+    2300178: Line481
+    2300180: Line483
+    2300182: Line484
+    2300184: Line485
+    2300186: Line494
+    2300188: Line495
+    2300190: Line496
+    2300192: Line497
+    2300194: Line572
+    2300196: Line596
+    2300198: Line597
+    2300200: Line598
+    2300202: Line599
+    2300204: Line605
+    2300206: Line623
+    2300208: Line624
+    2300210: Line625
+    2300212: Line626
+    2300214: Line627
+    2300216: M441
+    2300218: M444
+    2300220: M623
+    2300222: MazeWallt2149
+    2300224: moss28
+    2300226: MossMountain231
+    2300228: MossMountain232
+    2300230: MossMountain233
+    2300232: MossMountain243
+    2300234: MossMountain244
+    2300236: Mountain
+    2300238: Mountain459
+    2300240: Mountain460
+    2300242: Mountain462
+    2300244: Mountain463
+    2300246: Mountain464
+    2300248: Mountain465
+    2300250: Mountain466
+    2300252: Mountain_01
+    2300254: Mountain_53
+    2300256: Mountain_755
+    2300258: Mountain_756
+    2300260: Mountainrange440
+    2300262: Mountainrange441
+    2300264: Object001
+    2300266: Object002
+    2300268: Object1011
+    2300270: Object1012
+    2300272: Object1013
+    2300274: Object1014
+    2300276: Object1016
+    2300278: Object1448
+    2300280: Object1449
+    2300282: Object1451
+    2300284: Object1542
+    2300286: Object1543
+    2300288: Object1544
+    2300290: Object1545
+    2300292: Object1546
+    2300294: Object1547
+    2300296: Object1548
+    2300298: Object1550
+    2300300: Object1551
+    2300302: Object1552
+    2300304: Object1553
+    2300306: Object1554
+    2300308: Object1555
+    2300310: Object1556
+    2300312: Object1557
+    2300314: Object1558
+    2300316: Object1559
+    2300318: Object1560
+    2300320: Object1561
+    2300322: Object1582
+    2300324: Object1583
+    2300326: Object1593
+    2300328: Object1594
+    2300330: Object1595
+    2300332: Object1596
+    2300334: Object1597
+    2300336: Object1600
+    2300338: Object1601
+    2300340: Object1602
+    2300342: Object1603
+    2300344: Object1621
+    2300346: Object1632
+    2300348: Object1634
+    2300350: Object1635
+    2300352: Object1636
+    2300354: Object1637
+    2300356: Object1638
+    2300358: Object1639
+    2300360: Object1737
+    2300362: Object1812
+    2300364: Object1813
+    2300366: Object1818
+    2300368: Object1825
+    2300370: Object1838
+    2300372: Object1839
+    2300374: Object1840
+    2300376: Object1841
+    2300378: Object1842
+    2300380: Object1844
+    2300382: Object1863
+    2300384: Object1876
+    2300386: Object1884
+    2300388: Object1945
+    2300390: Object1950
+    2300392: Object1956
+    2300394: Object1957
+    2300396: Object1958
+    2300398: Object1972
+    2300400: Object1973
+    2300402: Object1974
+    2300404: Object1979
+    2300406: Object1980
+    2300408: Object1981
+    2300410: Object2004
+    2300412: Object2006
+    2300414: Object2032
+    2300416: Object2040
+    2300418: Object2041
+    2300420: Object2042
+    2300422: Object2044
+    2300424: Object2087
+    2300426: Object2088
+    2300428: Object2089
+    2300430: Object2091
+    2300432: Object2150
+    2300434: Object2151
+    2300436: Object2152
+    2300438: Object2155
+    2300440: Object2156
+    2300442: Object2157
+    2300444: Object2158
+    2300446: Object2159
+    2300448: Object2160
+    2300450: Object2162
+    2300452: Object2163
+    2300454: Object679
+    2300456: Object683
+    2300458: Object751
+    2300460: Object754
+    2300462: Object764
+    2300464: Object796
+    2300466: Object801
+    2300468: Object802
+    2300470: Object862
+    2300472: Object863
+    2300474: Object973
+    2300476: PillarRoad
+    2300478: Pine486
+    2300480: Pinetree19
+    2300482: Pinetree20
+    2300484: Pinetree22
+    2300486: Pinetree418
+    2300488: Pinetree475
+    2300490: PineTRee82
+    2300492: Pinetreee416
+    2300494: PinkTree376
+    2300496: PinkTRee551
+    2300498: PinkTree_005
+    2300500: PinkTree_006
+    2300502: PinkTree_007
+    2300504: Plane052
+    2300506: Plane182
+    2300508: Plane223
+    2300510: Plane224
+    2300512: Plane233
+    2300514: Plane267
+    2300516: Plane294
+    2300518: plants
+    2300520: Portal_004
+    2300522: Portal_005
+    2300524: RandomIsle_05
+    2300526: RedGate001
+    2300528: RedGate434
+    2300530: RedHouse
+    2300532: REed
+    2300534: Reed
+    2300536: Reed 1
+    2300538: Rock0092
+    2300540: Rock1768
+    2300542: Rock1769
+    2300544: Rock1771
+    2300546: Rock4007
+    2300548: Rock786
+    2300550: Rockteam225
+    2300552: SedanChair_004
+    2300554: SedanChair_005
+    2300556: SedanChair_006
+    2300558: SedanChair_007
+    2300560: SedanChair_008
+    2300562: SedanChair_009
+    2300564: Small_Island_078
+    2300566: Treasure343
+    2300568: Treasure344
+    2300570: Treasure345
+    2300572: Treasure346
+    2300574: Treasure347
+    2300576: Treasure348
+    2300578: Treasure349
+    2300580: Treasure350
+    2300582: TreauserChest438
+    2300584: Tree
+    2300586: Tree_01d001
+    2300588: Tree_02b001
+    2300590: Tree_02c001
+    2300592: Trees156
+    2300594: Vine_003
+    2300596: Vine_004
+    2300598: Vine_005
+    2300600: Vine_006
+    2300602: Vine_007
+    2300604: Wall_Pillar_013
+    2300606: Wall_Pillar_028
+    2300608: Wall_Pillar_029
+    2300610: Wall_Pillar_030
+    2300612: Wall_Pillar_031
+    2300614: Wall_Pillar_032
+    2300616: Wall_Pillar_033
+    2300618: Wall_Pillar_034
+    2300620: Wall_Pillar_035
+    2300622: Wall_Pillar_036
+    2300624: Wall_Pillar_037
+    2300626: Water
+    2300628: water
+    2300630: waterfall
+    2300632: WaterFall001
+    2300634: WaterFlow
+    2300636: Waterflow2
+    2300638: waterflow2
+    2300640: waterhalo
+    2300642: waterhalo2
+    2300644: z001
+    3300000: 325345
+    3300002: 333
+    3300004: 444
+    3300006: 47
+    3300008: 67
+    3300010: 9785
+    3300012: AnimateWater
+    3300014: Barrel1573
+    3300016: Base161
+    3300018: Base220
+    3300020: BearTrap_Screw001
+    3300022: BearTrap_Screw002
+    3300024: BearTrap_Screw003
+    3300026: BearTrap_Screw004
+    3300028: BigIsle
+    3300030: Box093
+    3300032: Box215
+    3300034: Box221
+    3300036: Box293
+    3300038: Box295
+    3300040: Box296
+    3300042: Box297
+    3300044: Box298
+    3300046: Box397
+    3300048: BrighTone
+    3300050: Brightone222A
+    3300052: Bush2012
+    3300054: Bush2157
+    3300056: Bush616
+    3300058: Bush_007
+    3300060: Bush_008
+    3300062: Bush_009
+    3300064: Bush_010
+    3300066: Bush_011
+    3300068: Bush_012
+    3300070: Bush_013
+    3300072: Bush_014
+    3300074: Color_Plane001
+    3300076: Cot
+    3300078: Cylinder034
+    3300080: Fence010
+    3300082: Fence797
+    3300084: FireCoal_LOD_004
+    3300086: FireCoal_LOD_031
+    3300088: FireCoal_LOD_039
+    3300090: FireCoal_LOD_041
+    3300092: FireCoal_LOD_047
+    3300094: FireCoal_LOD_049
+    3300096: FireCoal_LOD_052
+    3300098: Flag
+    3300100: Flag001
+    3300102: Flag002
+    3300104: Flag003
+    3300106: Flower2053
+    3300108: GiantTree_003
+    3300110: GiantTree_004
+    3300112: GiantTree_005
+    3300114: GiantTree_006
+    3300116: GoldenPalace
+    3300118: Grass_07a001
+    3300120: Grass_07a002
+    3300122: Grass_07a003
+    3300124: Grass_07a004
+    3300126: Grass_07a005
+    3300128: Grass_07a006
+    3300130: Grass_07a007
+    3300132: Grass_07b001
+    3300134: Grass_07b002
+    3300136: Grass_07b003
+    3300138: Grass_07b004
+    3300140: Islande2039
+    3300142: Islande2040
+    3300144: IslandRoot
+    3300146: Isle169
+    3300148: Isle180
+    3300150: Lake
+    3300152: LakeSurface
+    3300154: Line229
+    3300156: Line234
+    3300158: Line238
+    3300160: Line347
+    3300162: Line349
+    3300164: Line417
+    3300166: Line440
+    3300168: Line442
+    3300170: Line445
+    3300172: Line470
+    3300174: Line479
+    3300176: Line480
+    3300178: Line481
+    3300180: Line483
+    3300182: Line484
+    3300184: Line485
+    3300186: Line494
+    3300188: Line495
+    3300190: Line496
+    3300192: Line497
+    3300194: Line572
+    3300196: Line596
+    3300198: Line597
+    3300200: Line598
+    3300202: Line599
+    3300204: Line605
+    3300206: Line623
+    3300208: Line624
+    3300210: Line625
+    3300212: Line626
+    3300214: Line627
+    3300216: M441
+    3300218: M444
+    3300220: M623
+    3300222: MazeWallt2149
+    3300224: moss28
+    3300226: MossMountain231
+    3300228: MossMountain232
+    3300230: MossMountain233
+    3300232: MossMountain243
+    3300234: MossMountain244
+    3300236: Mountain
+    3300238: Mountain459
+    3300240: Mountain460
+    3300242: Mountain462
+    3300244: Mountain463
+    3300246: Mountain464
+    3300248: Mountain465
+    3300250: Mountain466
+    3300252: Mountain_01
+    3300254: Mountain_53
+    3300256: Mountain_755
+    3300258: Mountain_756
+    3300260: Mountainrange440
+    3300262: Mountainrange441
+    3300264: Object001
+    3300266: Object002
+    3300268: Object1011
+    3300270: Object1012
+    3300272: Object1013
+    3300274: Object1014
+    3300276: Object1016
+    3300278: Object1448
+    3300280: Object1449
+    3300282: Object1451
+    3300284: Object1542
+    3300286: Object1543
+    3300288: Object1544
+    3300290: Object1545
+    3300292: Object1546
+    3300294: Object1547
+    3300296: Object1548
+    3300298: Object1550
+    3300300: Object1551
+    3300302: Object1552
+    3300304: Object1553
+    3300306: Object1554
+    3300308: Object1555
+    3300310: Object1556
+    3300312: Object1557
+    3300314: Object1558
+    3300316: Object1559
+    3300318: Object1560
+    3300320: Object1561
+    3300322: Object1582
+    3300324: Object1583
+    3300326: Object1593
+    3300328: Object1594
+    3300330: Object1595
+    3300332: Object1596
+    3300334: Object1597
+    3300336: Object1600
+    3300338: Object1601
+    3300340: Object1602
+    3300342: Object1603
+    3300344: Object1621
+    3300346: Object1632
+    3300348: Object1634
+    3300350: Object1635
+    3300352: Object1636
+    3300354: Object1637
+    3300356: Object1638
+    3300358: Object1639
+    3300360: Object1737
+    3300362: Object1812
+    3300364: Object1813
+    3300366: Object1818
+    3300368: Object1825
+    3300370: Object1838
+    3300372: Object1839
+    3300374: Object1840
+    3300376: Object1841
+    3300378: Object1842
+    3300380: Object1844
+    3300382: Object1863
+    3300384: Object1876
+    3300386: Object1884
+    3300388: Object1945
+    3300390: Object1950
+    3300392: Object1956
+    3300394: Object1957
+    3300396: Object1958
+    3300398: Object1972
+    3300400: Object1973
+    3300402: Object1974
+    3300404: Object1979
+    3300406: Object1980
+    3300408: Object1981
+    3300410: Object2004
+    3300412: Object2006
+    3300414: Object2032
+    3300416: Object2040
+    3300418: Object2041
+    3300420: Object2042
+    3300422: Object2044
+    3300424: Object2087
+    3300426: Object2088
+    3300428: Object2089
+    3300430: Object2091
+    3300432: Object2150
+    3300434: Object2151
+    3300436: Object2152
+    3300438: Object2155
+    3300440: Object2156
+    3300442: Object2157
+    3300444: Object2158
+    3300446: Object2159
+    3300448: Object2160
+    3300450: Object2162
+    3300452: Object2163
+    3300454: Object679
+    3300456: Object683
+    3300458: Object751
+    3300460: Object754
+    3300462: Object764
+    3300464: Object796
+    3300466: Object801
+    3300468: Object802
+    3300470: Object862
+    3300472: Object863
+    3300474: Object973
+    3300476: PillarRoad
+    3300478: Pine486
+    3300480: Pinetree19
+    3300482: Pinetree20
+    3300484: Pinetree22
+    3300486: Pinetree418
+    3300488: Pinetree475
+    3300490: PineTRee82
+    3300492: Pinetreee416
+    3300494: PinkTree376
+    3300496: PinkTRee551
+    3300498: PinkTree_005
+    3300500: PinkTree_006
+    3300502: PinkTree_007
+    3300504: Plane052
+    3300506: Plane182
+    3300508: Plane223
+    3300510: Plane224
+    3300512: Plane233
+    3300514: Plane267
+    3300516: Plane294
+    3300518: plants
+    3300520: Portal_004
+    3300522: Portal_005
+    3300524: RandomIsle_05
+    3300526: RedGate001
+    3300528: RedGate434
+    3300530: RedHouse
+    3300532: REed
+    3300534: Reed
+    3300536: Reed 1
+    3300538: Rock0092
+    3300540: Rock1768
+    3300542: Rock1769
+    3300544: Rock1771
+    3300546: Rock4007
+    3300548: Rock786
+    3300550: Rockteam225
+    3300552: SedanChair_004
+    3300554: SedanChair_005
+    3300556: SedanChair_006
+    3300558: SedanChair_007
+    3300560: SedanChair_008
+    3300562: SedanChair_009
+    3300564: Small_Island_078
+    3300566: Treasure343
+    3300568: Treasure344
+    3300570: Treasure345
+    3300572: Treasure346
+    3300574: Treasure347
+    3300576: Treasure348
+    3300578: Treasure349
+    3300580: Treasure350
+    3300582: TreauserChest438
+    3300584: Tree
+    3300586: Tree_01d001
+    3300588: Tree_02b001
+    3300590: Tree_02c001
+    3300592: Trees156
+    3300594: Vine_003
+    3300596: Vine_004
+    3300598: Vine_005
+    3300600: Vine_006
+    3300602: Vine_007
+    3300604: Wall_Pillar_013
+    3300606: Wall_Pillar_028
+    3300608: Wall_Pillar_029
+    3300610: Wall_Pillar_030
+    3300612: Wall_Pillar_031
+    3300614: Wall_Pillar_032
+    3300616: Wall_Pillar_033
+    3300618: Wall_Pillar_034
+    3300620: Wall_Pillar_035
+    3300622: Wall_Pillar_036
+    3300624: Wall_Pillar_037
+    3300626: Water
+    3300628: water
+    3300630: waterfall
+    3300632: WaterFall001
+    3300634: WaterFlow
+    3300636: Waterflow2
+    3300638: waterflow2
+    3300640: waterhalo
+    3300642: waterhalo2
+    3300644: z001
+    4300000: Mountain_01
+    4300002: Object751
+    4300004: Mountain_53
+    4300006: Mountain_756
+    4300008: waterfall
+    4300010: Object764
+    4300012: Mountain_755
+    4300014: Object754
+    4300016: waterhalo
+    4300018: Waterflow2
+    4300020: Object1011
+    4300022: Object1012
+    4300024: Object1013
+    4300026: Object1014
+    4300028: Line347
+    4300030: Object1016
+    4300032: Line349
+    4300034: Object1451
+    4300036: Object1542
+    4300038: Object1543
+    4300040: Object1544
+    4300042: Object1545
+    4300044: Object1546
+    4300046: Object1547
+    4300048: Object1548
+    4300050: Object1550
+    4300052: Object1551
+    4300054: Object1552
+    4300056: Object1553
+    4300058: Object1554
+    4300060: Object1555
+    4300062: Object1556
+    4300064: Object1557
+    4300066: Object1558
+    4300068: Object1559
+    4300070: Pinetreee416
+    4300072: Line417
+    4300074: Pinetree418
+    4300076: Pinetree19
+    4300078: Pinetree20
+    4300080: Pinetree22
+    4300082: Barrel1573
+    4300084: Object1582
+    4300086: Grass_07a006
+    4300088: Object1593
+    4300090: Mountainrange440
+    4300092: M441
+    4300094: Line442
+    4300096: M444
+    4300098: Line445
+    4300100: Base220
+    4300102: Mountain459
+    4300104: Mountain460
+    4300106: Mountain462
+    4300108: Mountain463
+    4300110: Mountain464
+    4300112: Mountain465
+    4300114: Mountain466
+    4300116: Plane182
+    4300118: Box221
+    4300120: Line470
+    4300122: GoldenPalace
+    4300124: RedHouse
+    4300126: RedGate001
+    4300128: Wall_Pillar_013
+    4300130: GiantTree_003
+    4300132: Pinetree475
+    4300134: Wall_Pillar_028
+    4300136: Wall_Pillar_029
+    4300138: Wall_Pillar_030
+    4300140: Wall_Pillar_031
+    4300142: Wall_Pillar_032
+    4300144: Wall_Pillar_033
+    4300146: Wall_Pillar_034
+    4300148: Line479
+    4300150: Line480
+    4300152: Line481
+    4300154: PineTRee82
+    4300156: Wall_Pillar_035
+    4300158: Wall_Pillar_036
+    4300160: Wall_Pillar_037
+    4300162: Object1632
+    4300164: Object1634
+    4300166: Object1635
+    4300168: Object1636
+    4300170: Object1637
+    4300172: Object1638
+    4300174: Object1639
+    4300176: Line483
+    4300178: Line484
+    4300180: Line485
+    4300182: Pine486
+    4300184: Line572
+    4300186: Object1825
+    4300188: Object1838
+    4300190: Object1839
+    4300192: Object1840
+    4300194: Object1841
+    4300196: Object1842
+    4300198: Object1844
+    4300200: Line596
+    4300202: Object973
+    4300204: Cylinder034
+    4300206: RedGate434
+    4300208: Fence797
+    4300210: Flag
+    4300212: Flag001
+    4300214: Line605
+    4300216: Object1945
+    4300218: Object1950
+    4300220: Object1956
+    4300222: Object1957
+    4300224: Object1958
+    4300226: Object1972
+    4300228: Object1973
+    4300230: Object1974
+    4300232: Object1979
+    4300234: Object1980
+    4300236: Object1981
+    4300238: Flag002
+    4300240: Flag003
+    4300242: Base161
+    4300244: Object2032
+    4300246: Rock1768
+    4300248: Rock1769
+    4300250: Rock1771
+    4300252: Rock786
+    4300254: Treasure343
+    4300256: 333
+    4300258: 444
+    4300260: 9785
+    4300262: Line440
+    4300264: 47
+    4300266: PinkTree376
+    4300268: 325345
+    4300270: 67
+    4300272: Object1594
+    4300274: Object1595
+    4300276: Object1596
+    4300278: Object1597
+    4300280: Object1600
+    4300282: Object1601
+    4300284: Object1602
+    4300286: Object1603
+    4300288: Bush616
+    4300290: Object1621
+    4300292: Cot
+    4300294: PinkTRee551
+    4300296: Object1812
+    4300298: Object1813
+    4300300: Object2006
+    4300302: Rock4007
+    4300304: Rock0092
+    4300306: Bush2012
+    4300308: Mountainrange441
+    4300310: M623
+    4300312: PinkTree_005
+    4300314: PinkTree_006
+    4300316: PinkTree_007
+    4300318: Object2040
+    4300320: Object2041
+    4300322: Box397
+    4300324: Object2042
+    4300326: BrighTone
+    4300328: Object2044
+    4300330: Object2004
+    4300332: Line599
+    4300334: Line598
+    4300336: Line597
+    4300338: Object1884
+    4300340: Plane267
+    4300342: Object1876
+    4300344: Box215
+    4300346: Object1583
+    4300348: Object1561
+    4300350: Object1560
+    4300352: Tree
+    4300354: Object863
+    4300356: Object862
+    4300358: Box093
+    4300360: Object802
+    4300362: Object801
+    4300364: Plane052
+    4300366: Portal_004
+    4300368: FireCoal_LOD_004
+    4300370: FireCoal_LOD_031
+    4300372: FireCoal_LOD_039
+    4300374: FireCoal_LOD_041
+    4300376: GiantTree_004
+    4300378: Portal_005
+    4300380: Line623
+    4300382: Line624
+    4300384: Object2087
+    4300386: Object2088
+    4300388: Object2089
+    4300390: Object1737
+    4300392: Box293
+    4300394: Box295
+    4300396: Box296
+    4300398: Box297
+    4300400: Box298
+    4300402: Line494
+    4300404: Line495
+    4300406: Line496
+    4300408: Line497
+    4300410: Object2091
+    4300412: Tree_02b001
+    4300414: Tree_02c001
+    4300416: IslandRoot
+    4300418: GiantTree_005
+    4300420: Line625
+    4300422: Line626
+    4300424: Line627
+    4300426: Tree_01d001
+    4300428: SedanChair_004
+    4300430: SedanChair_005
+    4300432: SedanChair_006
+    4300434: SedanChair_007
+    4300436: SedanChair_008
+    4300438: MazeWallt2149
+    4300440: Object2150
+    4300442: Object2151
+    4300444: FireCoal_LOD_047
+    4300446: FireCoal_LOD_049
+    4300448: Treasure344
+    4300450: Treasure345
+    4300452: Treasure346
+    4300454: Treasure347
+    4300456: Treasure348
+    4300458: FireCoal_LOD_052
+    4300460: Object2152
+    4300462: SedanChair_009
+    4300464: Treasure349
+    4300466: GiantTree_006
+    4300468: Trees156
+    4300470: Bush2157
+    4300472: TreauserChest438
+    4300474: PillarRoad
+    4300476: Grass_07b001
+    4300478: Grass_07a001
+    4300480: Grass_07b002
+    4300482: Grass_07a002
+    4300484: Grass_07b003
+    4300486: Grass_07a003
+    4300488: Grass_07a004
+    4300490: Grass_07b004
+    4300492: Bush_007
+    4300494: Bush_008
+    4300496: Bush_009
+    4300498: Bush_010
+    4300500: Bush_011
+    4300502: Bush_012
+    4300504: Vine_003
+    4300506: Vine_004
+    4300508: Vine_005
+    4300510: Vine_006
+    4300512: Vine_007
+    4300514: Color_Plane001
+    4300516: Bush_013
+    4300518: Bush_014
+    4300520: Brightone222A
+    4300522: Plane294
+    4300524: Object2155
+    4300526: Treasure350
+    4300528: Grass_07a005
+    4300530: Grass_07a007
+    4300532: Flower2053
+    4300534: Fence010
+    4300536: z001
+    4300538: Object1818
+    4300540: Plane223
+    4300542: Plane224
+    4300544: Plane233
+    4300546: REed
+    4300548: Lake
+    4300550: waterflow2
+    4300552: Reed
+    4300554: Reed
+    4300556: Water
+    4300558: Mountain
+    4300560: waterhalo2
+    4300562: water
+    4300564: moss28
+    4300566: Line229
+    4300568: MossMountain231
+    4300570: MossMountain232
+    4300572: MossMountain233
+    4300574: Line234
+    4300576: Line238
+    4300578: Object683
+    4300580: plants
+    4300582: MossMountain244
+    4300584: Object679
+    4300586: MossMountain243
+    4300588: WaterFlow
+    4300590: AnimateWater
+    4300592: LakeSurface
+    4300594: WaterFall001
+    4300596: Object001
+    4300598: Object002
+    4300600: Object2156
+    4300602: Object2157
+    4300604: Rockteam225
+    4300606: Object2159
+    4300608: Object2160
+    4300610: Object2162
+    4300612: SpringTrap_part003
+    4300614: SpringTrap_part004
+    4300616: SpringTrap_part005
+    4300618: SpringTrap_part006
+    4300620: SpringTrap_part007
+    4300622: SpringTrap_part008
+    4300624: SpringTrap_part009
+    4300626: SpringTrap_part010
+    4300628: SpringTrap_part011
+    4300630: SpringTrap_part012
+    4300632: SpringTrap_part013
+    4300634: SpringTrap_part014
+    4300636: MaceTrap_Frame003
+    4300638: Mace003
+    4300640: BearTrap_L001
+    4300642: BearTrap_Screw001
+    4300644: BearTrap_R001
+    4300646: MaceTrap_Frame002
+    4300648: Mace002
+    4300650: BearTrap_L002
+    4300652: BearTrap_Screw002
+    4300654: BearTrap_R002
+    4300656: BearTrap_L004
+    4300658: BearTrap_Screw004
+    4300660: BearTrap_R004
+    4300662: BearTrap_L003
+    4300664: BearTrap_Screw003
+    4300666: BearTrap_R003
+    4300668: Mace004
+    4300670: MaceTrap_Frame004
+    4300672: MaceTrap_Frame001
+    4300674: Mace001
+    4300676: SpikeBase006
+    4300678: SpikeTrap012
+    4300680: SpikeBase005
+    4300682: SpikeTrap010
+    4300684: SpikeBase004
+    4300686: SpikeTrap008
+    4300688: SpikeBase003
+    4300690: SpikeTrap006
+    4300692: SpikeBase002
+    4300694: SpikeTrap004
+    4300696: SpikeTrap002
+    4300698: SpikeBase001
+    4300700: Isle180
+    4300702: RandomIsle_05
+    4300704: Object1448
+    4300706: Object1449
+    4300708: Object796
+    4300710: BigIsle
+    4300712: Object1863
+    4300714: Islande2039
+    4300716: Object2158
+    4300718: Islande2040
+    4300720: Small_Island_078
+    4300722: Isle169
+    4300724: Object2163
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: BearTrap_L001
+    13700002: BearTrap_L002
+    13700004: BearTrap_L003
+    13700006: BearTrap_L004
+    13700008: BearTrap_R001
+    13700010: BearTrap_R002
+    13700012: BearTrap_R003
+    13700014: BearTrap_R004
+    13700016: Mace001
+    13700018: Mace002
+    13700020: Mace003
+    13700022: Mace004
+    13700024: MaceTrap_Frame001
+    13700026: MaceTrap_Frame002
+    13700028: MaceTrap_Frame003
+    13700030: MaceTrap_Frame004
+    13700032: SpikeBase001
+    13700034: SpikeBase002
+    13700036: SpikeBase003
+    13700038: SpikeBase004
+    13700040: SpikeBase005
+    13700042: SpikeBase006
+    13700044: SpikeTrap002
+    13700046: SpikeTrap004
+    13700048: SpikeTrap006
+    13700050: SpikeTrap008
+    13700052: SpikeTrap010
+    13700054: SpikeTrap012
+    13700056: SpringTrap_part003
+    13700058: SpringTrap_part004
+    13700060: SpringTrap_part005
+    13700062: SpringTrap_part006
+    13700064: SpringTrap_part007
+    13700066: SpringTrap_part008
+    13700068: SpringTrap_part009
+    13700070: SpringTrap_part010
+    13700072: SpringTrap_part011
+    13700074: SpringTrap_part012
+    13700076: SpringTrap_part013
+    13700078: SpringTrap_part014
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: 47
+        weight: 1
+      - path: 67
+        weight: 1
+      - path: 333
+        weight: 1
+      - path: 444
+        weight: 1
+      - path: 9785
+        weight: 1
+      - path: 325345
+        weight: 1
+      - path: Barrel1573
+        weight: 1
+      - path: Base161
+        weight: 1
+      - path: Base220
+        weight: 1
+      - path: BearTrap001
+        weight: 1
+      - path: BearTrap001/Group047
+        weight: 1
+      - path: BearTrap001/Group047/BearTrap_L001
+        weight: 1
+      - path: BearTrap001/Group047/BearTrap_R001
+        weight: 1
+      - path: BearTrap001/Group047/BearTrap_Screw001
+        weight: 1
+      - path: BearTrap001/Group047/Bone044
+        weight: 1
+      - path: BearTrap001/Group047/Bone044/Bone043
+        weight: 1
+      - path: BearTrap001/Group047/Bone045
+        weight: 1
+      - path: BearTrap001/Group047/Bone045/Bone046
+        weight: 1
+      - path: BearTrap002
+        weight: 1
+      - path: BearTrap002/Group048
+        weight: 1
+      - path: BearTrap002/Group048/BearTrap_L002
+        weight: 1
+      - path: BearTrap002/Group048/BearTrap_R002
+        weight: 1
+      - path: BearTrap002/Group048/BearTrap_Screw002
+        weight: 1
+      - path: BearTrap002/Group048/Bone047
+        weight: 1
+      - path: BearTrap002/Group048/Bone047/Bone048
+        weight: 1
+      - path: BearTrap002/Group048/Bone049
+        weight: 1
+      - path: BearTrap002/Group048/Bone049/Bone050
+        weight: 1
+      - path: BearTrap003
+        weight: 1
+      - path: BearTrap003/Group049
+        weight: 1
+      - path: BearTrap003/Group049/BearTrap_L003
+        weight: 1
+      - path: BearTrap003/Group049/BearTrap_R003
+        weight: 1
+      - path: BearTrap003/Group049/BearTrap_Screw003
+        weight: 1
+      - path: BearTrap003/Group049/Bone051
+        weight: 1
+      - path: BearTrap003/Group049/Bone051/Bone052
+        weight: 1
+      - path: BearTrap003/Group049/Bone053
+        weight: 1
+      - path: BearTrap003/Group049/Bone053/Bone054
+        weight: 1
+      - path: BearTrap004
+        weight: 1
+      - path: BearTrap004/Group050
+        weight: 1
+      - path: BearTrap004/Group050/BearTrap_L004
+        weight: 1
+      - path: BearTrap004/Group050/BearTrap_R004
+        weight: 1
+      - path: BearTrap004/Group050/BearTrap_Screw004
+        weight: 1
+      - path: BearTrap004/Group050/Bone055
+        weight: 1
+      - path: BearTrap004/Group050/Bone055/Bone056
+        weight: 1
+      - path: BearTrap004/Group050/Bone057
+        weight: 1
+      - path: BearTrap004/Group050/Bone057/Bone058
+        weight: 1
+      - path: BigIsle
+        weight: 1
+      - path: Box093
+        weight: 1
+      - path: Box215
+        weight: 1
+      - path: Box221
+        weight: 1
+      - path: Box293
+        weight: 1
+      - path: Box295
+        weight: 1
+      - path: Box296
+        weight: 1
+      - path: Box297
+        weight: 1
+      - path: Box298
+        weight: 1
+      - path: Box397
+        weight: 1
+      - path: BrighTone
+        weight: 1
+      - path: Brightone222A
+        weight: 1
+      - path: Bush616
+        weight: 1
+      - path: Bush2012
+        weight: 1
+      - path: Bush2157
+        weight: 1
+      - path: Bush_007
+        weight: 1
+      - path: Bush_008
+        weight: 1
+      - path: Bush_009
+        weight: 1
+      - path: Bush_010
+        weight: 1
+      - path: Bush_011
+        weight: 1
+      - path: Bush_012
+        weight: 1
+      - path: Bush_013
+        weight: 1
+      - path: Bush_014
+        weight: 1
+      - path: Color_Plane001
+        weight: 1
+      - path: Cot
+        weight: 1
+      - path: Cylinder034
+        weight: 1
+      - path: Fence010
+        weight: 1
+      - path: Fence797
+        weight: 1
+      - path: FireCoal_LOD_004
+        weight: 1
+      - path: FireCoal_LOD_031
+        weight: 1
+      - path: FireCoal_LOD_039
+        weight: 1
+      - path: FireCoal_LOD_041
+        weight: 1
+      - path: FireCoal_LOD_047
+        weight: 1
+      - path: FireCoal_LOD_049
+        weight: 1
+      - path: FireCoal_LOD_052
+        weight: 1
+      - path: Flag
+        weight: 1
+      - path: Flag001
+        weight: 1
+      - path: Flag002
+        weight: 1
+      - path: Flag003
+        weight: 1
+      - path: Flower2053
+        weight: 1
+      - path: GiantTree_003
+        weight: 1
+      - path: GiantTree_004
+        weight: 1
+      - path: GiantTree_005
+        weight: 1
+      - path: GiantTree_006
+        weight: 1
+      - path: GoldenPalace
+        weight: 1
+      - path: Grass_07a001
+        weight: 1
+      - path: Grass_07a002
+        weight: 1
+      - path: Grass_07a003
+        weight: 1
+      - path: Grass_07a004
+        weight: 1
+      - path: Grass_07a005
+        weight: 1
+      - path: Grass_07a006
+        weight: 1
+      - path: Grass_07a007
+        weight: 1
+      - path: Grass_07b001
+        weight: 1
+      - path: Grass_07b002
+        weight: 1
+      - path: Grass_07b003
+        weight: 1
+      - path: Grass_07b004
+        weight: 1
+      - path: Islande2039
+        weight: 1
+      - path: Islande2040
+        weight: 1
+      - path: IslandRoot
+        weight: 1
+      - path: Isle169
+        weight: 1
+      - path: Isle180
+        weight: 1
+      - path: Lake
+        weight: 1
+      - path: Lake/Mountain
+        weight: 1
+      - path: Lake/Reed
+        weight: 1
+      - path: Lake/Reed 1
+        weight: 1
+      - path: Lake/Water
+        weight: 1
+      - path: Lake/water
+        weight: 1
+      - path: Lake/waterflow2
+        weight: 1
+      - path: Lake/waterhalo2
+        weight: 1
+      - path: Line347
+        weight: 1
+      - path: Line349
+        weight: 1
+      - path: Line417
+        weight: 1
+      - path: Line440
+        weight: 1
+      - path: Line442
+        weight: 1
+      - path: Line445
+        weight: 1
+      - path: Line470
+        weight: 1
+      - path: Line479
+        weight: 1
+      - path: Line480
+        weight: 1
+      - path: Line481
+        weight: 1
+      - path: Line483
+        weight: 1
+      - path: Line484
+        weight: 1
+      - path: Line485
+        weight: 1
+      - path: Line494
+        weight: 1
+      - path: Line495
+        weight: 1
+      - path: Line496
+        weight: 1
+      - path: Line497
+        weight: 1
+      - path: Line572
+        weight: 1
+      - path: Line596
+        weight: 1
+      - path: Line597
+        weight: 1
+      - path: Line598
+        weight: 1
+      - path: Line599
+        weight: 1
+      - path: Line605
+        weight: 1
+      - path: Line623
+        weight: 1
+      - path: Line624
+        weight: 1
+      - path: Line625
+        weight: 1
+      - path: Line626
+        weight: 1
+      - path: Line627
+        weight: 1
+      - path: M441
+        weight: 1
+      - path: M444
+        weight: 1
+      - path: M623
+        weight: 1
+      - path: MazeWallt2149
+        weight: 1
+      - path: moss28
+        weight: 1
+      - path: moss28/AnimateWater
+        weight: 1
+      - path: moss28/LakeSurface
+        weight: 1
+      - path: moss28/Line229
+        weight: 1
+      - path: moss28/Line234
+        weight: 1
+      - path: moss28/Line238
+        weight: 1
+      - path: moss28/MossMountain231
+        weight: 1
+      - path: moss28/MossMountain232
+        weight: 1
+      - path: moss28/MossMountain233
+        weight: 1
+      - path: moss28/MossMountain243
+        weight: 1
+      - path: moss28/MossMountain244
+        weight: 1
+      - path: moss28/Object679
+        weight: 1
+      - path: moss28/Object683
+        weight: 1
+      - path: moss28/plants
+        weight: 1
+      - path: moss28/WaterFall001
+        weight: 1
+      - path: moss28/WaterFlow
+        weight: 1
+      - path: Mountain459
+        weight: 1
+      - path: Mountain460
+        weight: 1
+      - path: Mountain462
+        weight: 1
+      - path: Mountain463
+        weight: 1
+      - path: Mountain464
+        weight: 1
+      - path: Mountain465
+        weight: 1
+      - path: Mountain466
+        weight: 1
+      - path: Mountain_01
+        weight: 1
+      - path: Mountain_01/Mountain_53
+        weight: 1
+      - path: Mountain_01/Mountain_755
+        weight: 1
+      - path: Mountain_01/Mountain_756
+        weight: 1
+      - path: Mountain_01/Object751
+        weight: 1
+      - path: Mountain_01/Object754
+        weight: 1
+      - path: Mountain_01/Object764
+        weight: 1
+      - path: Mountain_01/waterfall
+        weight: 1
+      - path: Mountain_01/Waterflow2
+        weight: 1
+      - path: Mountain_01/waterhalo
+        weight: 1
+      - path: Mountainrange440
+        weight: 1
+      - path: Mountainrange441
+        weight: 1
+      - path: Object001
+        weight: 1
+      - path: Object002
+        weight: 1
+      - path: Object796
+        weight: 1
+      - path: Object801
+        weight: 1
+      - path: Object802
+        weight: 1
+      - path: Object862
+        weight: 1
+      - path: Object863
+        weight: 1
+      - path: Object973
+        weight: 1
+      - path: Object1011
+        weight: 1
+      - path: Object1012
+        weight: 1
+      - path: Object1013
+        weight: 1
+      - path: Object1014
+        weight: 1
+      - path: Object1016
+        weight: 1
+      - path: Object1448
+        weight: 1
+      - path: Object1449
+        weight: 1
+      - path: Object1451
+        weight: 1
+      - path: Object1542
+        weight: 1
+      - path: Object1543
+        weight: 1
+      - path: Object1544
+        weight: 1
+      - path: Object1545
+        weight: 1
+      - path: Object1546
+        weight: 1
+      - path: Object1547
+        weight: 1
+      - path: Object1548
+        weight: 1
+      - path: Object1550
+        weight: 1
+      - path: Object1551
+        weight: 1
+      - path: Object1552
+        weight: 1
+      - path: Object1553
+        weight: 1
+      - path: Object1554
+        weight: 1
+      - path: Object1555
+        weight: 1
+      - path: Object1556
+        weight: 1
+      - path: Object1557
+        weight: 1
+      - path: Object1558
+        weight: 1
+      - path: Object1559
+        weight: 1
+      - path: Object1560
+        weight: 1
+      - path: Object1561
+        weight: 1
+      - path: Object1582
+        weight: 1
+      - path: Object1583
+        weight: 1
+      - path: Object1593
+        weight: 1
+      - path: Object1594
+        weight: 1
+      - path: Object1595
+        weight: 1
+      - path: Object1596
+        weight: 1
+      - path: Object1597
+        weight: 1
+      - path: Object1600
+        weight: 1
+      - path: Object1601
+        weight: 1
+      - path: Object1602
+        weight: 1
+      - path: Object1603
+        weight: 1
+      - path: Object1621
+        weight: 1
+      - path: Object1632
+        weight: 1
+      - path: Object1634
+        weight: 1
+      - path: Object1635
+        weight: 1
+      - path: Object1636
+        weight: 1
+      - path: Object1637
+        weight: 1
+      - path: Object1638
+        weight: 1
+      - path: Object1639
+        weight: 1
+      - path: Object1737
+        weight: 1
+      - path: Object1812
+        weight: 1
+      - path: Object1813
+        weight: 1
+      - path: Object1818
+        weight: 1
+      - path: Object1825
+        weight: 1
+      - path: Object1838
+        weight: 1
+      - path: Object1839
+        weight: 1
+      - path: Object1840
+        weight: 1
+      - path: Object1841
+        weight: 1
+      - path: Object1842
+        weight: 1
+      - path: Object1844
+        weight: 1
+      - path: Object1863
+        weight: 1
+      - path: Object1876
+        weight: 1
+      - path: Object1884
+        weight: 1
+      - path: Object1945
+        weight: 1
+      - path: Object1950
+        weight: 1
+      - path: Object1956
+        weight: 1
+      - path: Object1957
+        weight: 1
+      - path: Object1958
+        weight: 1
+      - path: Object1972
+        weight: 1
+      - path: Object1973
+        weight: 1
+      - path: Object1974
+        weight: 1
+      - path: Object1979
+        weight: 1
+      - path: Object1980
+        weight: 1
+      - path: Object1981
+        weight: 1
+      - path: Object2004
+        weight: 1
+      - path: Object2006
+        weight: 1
+      - path: Object2032
+        weight: 1
+      - path: Object2040
+        weight: 1
+      - path: Object2041
+        weight: 1
+      - path: Object2042
+        weight: 1
+      - path: Object2044
+        weight: 1
+      - path: Object2087
+        weight: 1
+      - path: Object2088
+        weight: 1
+      - path: Object2089
+        weight: 1
+      - path: Object2091
+        weight: 1
+      - path: Object2150
+        weight: 1
+      - path: Object2151
+        weight: 1
+      - path: Object2152
+        weight: 1
+      - path: Object2155
+        weight: 1
+      - path: Object2156
+        weight: 1
+      - path: Object2157
+        weight: 1
+      - path: Object2158
+        weight: 1
+      - path: Object2159
+        weight: 1
+      - path: Object2160
+        weight: 1
+      - path: Object2162
+        weight: 1
+      - path: Object2163
+        weight: 1
+      - path: Particle View 001
+        weight: 1
+      - path: PillarRoad
+        weight: 1
+      - path: Pine486
+        weight: 1
+      - path: Pinetree19
+        weight: 1
+      - path: Pinetree20
+        weight: 1
+      - path: Pinetree22
+        weight: 1
+      - path: PineTRee82
+        weight: 1
+      - path: Pinetree418
+        weight: 1
+      - path: Pinetree475
+        weight: 1
+      - path: Pinetreee416
+        weight: 1
+      - path: PinkTree376
+        weight: 1
+      - path: PinkTRee551
+        weight: 1
+      - path: PinkTree_005
+        weight: 1
+      - path: PinkTree_006
+        weight: 1
+      - path: PinkTree_007
+        weight: 1
+      - path: Plane052
+        weight: 1
+      - path: Plane182
+        weight: 1
+      - path: Plane223
+        weight: 1
+      - path: Plane224
+        weight: 1
+      - path: Plane233
+        weight: 1
+      - path: Plane267
+        weight: 1
+      - path: Plane294
+        weight: 1
+      - path: Portal_004
+        weight: 1
+      - path: Portal_005
+        weight: 1
+      - path: RandomIsle_05
+        weight: 1
+      - path: RedGate001
+        weight: 1
+      - path: RedGate434
+        weight: 1
+      - path: RedHouse
+        weight: 1
+      - path: REed
+        weight: 1
+      - path: Rock0092
+        weight: 1
+      - path: Rock786
+        weight: 1
+      - path: Rock1768
+        weight: 1
+      - path: Rock1769
+        weight: 1
+      - path: Rock1771
+        weight: 1
+      - path: Rock4007
+        weight: 1
+      - path: Rockteam225
+        weight: 1
+      - path: SedanChair_004
+        weight: 1
+      - path: SedanChair_005
+        weight: 1
+      - path: SedanChair_006
+        weight: 1
+      - path: SedanChair_007
+        weight: 1
+      - path: SedanChair_008
+        weight: 1
+      - path: SedanChair_009
+        weight: 1
+      - path: Small_Island_078
+        weight: 1
+      - path: SpikeTrap001
+        weight: 1
+      - path: SpikeTrap001/Bone021
+        weight: 1
+      - path: SpikeTrap001/Bone022
+        weight: 1
+      - path: SpikeTrap001/SpikeBase001
+        weight: 1
+      - path: SpikeTrap001/SpikeTrap002
+        weight: 1
+      - path: SpikeTrap003
+        weight: 1
+      - path: SpikeTrap003/Bone033
+        weight: 1
+      - path: SpikeTrap003/Bone034
+        weight: 1
+      - path: SpikeTrap003/SpikeBase002
+        weight: 1
+      - path: SpikeTrap003/SpikeTrap004
+        weight: 1
+      - path: SpikeTrap005
+        weight: 1
+      - path: SpikeTrap005/Bone035
+        weight: 1
+      - path: SpikeTrap005/Bone036
+        weight: 1
+      - path: SpikeTrap005/SpikeBase003
+        weight: 1
+      - path: SpikeTrap005/SpikeTrap006
+        weight: 1
+      - path: SpikeTrap007
+        weight: 1
+      - path: SpikeTrap007/Bone037
+        weight: 1
+      - path: SpikeTrap007/Bone038
+        weight: 1
+      - path: SpikeTrap007/SpikeBase004
+        weight: 1
+      - path: SpikeTrap007/SpikeTrap008
+        weight: 1
+      - path: SpikeTrap009
+        weight: 1
+      - path: SpikeTrap009/Bone039
+        weight: 1
+      - path: SpikeTrap009/Bone040
+        weight: 1
+      - path: SpikeTrap009/SpikeBase005
+        weight: 1
+      - path: SpikeTrap009/SpikeTrap010
+        weight: 1
+      - path: SpikeTrap011
+        weight: 1
+      - path: SpikeTrap011/Bone041
+        weight: 1
+      - path: SpikeTrap011/Bone042
+        weight: 1
+      - path: SpikeTrap011/SpikeBase006
+        weight: 1
+      - path: SpikeTrap011/SpikeTrap012
+        weight: 1
+      - path: SpringTrap001
+        weight: 1
+      - path: SpringTrap001/Group041
+        weight: 1
+      - path: SpringTrap001/Group041/Bone019
+        weight: 1
+      - path: SpringTrap001/Group041/Bone020
+        weight: 1
+      - path: SpringTrap001/Group041/SpringTrap_part003
+        weight: 1
+      - path: SpringTrap001/Group041/SpringTrap_part004
+        weight: 1
+      - path: SpringTrap002
+        weight: 1
+      - path: SpringTrap002/Group042
+        weight: 1
+      - path: SpringTrap002/Group042/Bone023
+        weight: 1
+      - path: SpringTrap002/Group042/Bone024
+        weight: 1
+      - path: SpringTrap002/Group042/SpringTrap_part005
+        weight: 1
+      - path: SpringTrap002/Group042/SpringTrap_part006
+        weight: 1
+      - path: SpringTrap003
+        weight: 1
+      - path: SpringTrap003/Group043
+        weight: 1
+      - path: SpringTrap003/Group043/Bone025
+        weight: 1
+      - path: SpringTrap003/Group043/Bone026
+        weight: 1
+      - path: SpringTrap003/Group043/SpringTrap_part007
+        weight: 1
+      - path: SpringTrap003/Group043/SpringTrap_part008
+        weight: 1
+      - path: SpringTrap004
+        weight: 1
+      - path: SpringTrap004/Group044
+        weight: 1
+      - path: SpringTrap004/Group044/Bone027
+        weight: 1
+      - path: SpringTrap004/Group044/Bone028
+        weight: 1
+      - path: SpringTrap004/Group044/SpringTrap_part009
+        weight: 1
+      - path: SpringTrap004/Group044/SpringTrap_part010
+        weight: 1
+      - path: SpringTrap005
+        weight: 1
+      - path: SpringTrap005/Group045
+        weight: 1
+      - path: SpringTrap005/Group045/Bone029
+        weight: 1
+      - path: SpringTrap005/Group045/Bone030
+        weight: 1
+      - path: SpringTrap005/Group045/SpringTrap_part011
+        weight: 1
+      - path: SpringTrap005/Group045/SpringTrap_part012
+        weight: 1
+      - path: SpringTrap006
+        weight: 1
+      - path: SpringTrap006/Group046
+        weight: 1
+      - path: SpringTrap006/Group046/Bone031
+        weight: 1
+      - path: SpringTrap006/Group046/Bone032
+        weight: 1
+      - path: SpringTrap006/Group046/SpringTrap_part013
+        weight: 1
+      - path: SpringTrap006/Group046/SpringTrap_part014
+        weight: 1
+      - path: SwingingMaceTrap001
+        weight: 1
+      - path: SwingingMaceTrap001/Group038
+        weight: 1
+      - path: SwingingMaceTrap001/Group038/Bone013
+        weight: 1
+      - path: SwingingMaceTrap001/Group038/Bone013/Bone014
+        weight: 1
+      - path: SwingingMaceTrap001/Group038/Mace001
+        weight: 1
+      - path: SwingingMaceTrap001/Group038/MaceTrap_Frame001
+        weight: 1
+      - path: SwingingMaceTrap002
+        weight: 1
+      - path: SwingingMaceTrap002/Group039
+        weight: 1
+      - path: SwingingMaceTrap002/Group039/Bone015
+        weight: 1
+      - path: SwingingMaceTrap002/Group039/Bone015/Bone016
+        weight: 1
+      - path: SwingingMaceTrap002/Group039/Mace002
+        weight: 1
+      - path: SwingingMaceTrap002/Group039/MaceTrap_Frame002
+        weight: 1
+      - path: SwingingMaceTrap003
+        weight: 1
+      - path: SwingingMaceTrap003/Group040
+        weight: 1
+      - path: SwingingMaceTrap003/Group040/Bone018
+        weight: 1
+      - path: SwingingMaceTrap003/Group040/Bone018/Bone017
+        weight: 1
+      - path: SwingingMaceTrap003/Group040/Mace003
+        weight: 1
+      - path: SwingingMaceTrap003/Group040/MaceTrap_Frame003
+        weight: 1
+      - path: SwingingMaceTrap004
+        weight: 1
+      - path: SwingingMaceTrap004/Group051
+        weight: 1
+      - path: SwingingMaceTrap004/Group051/Bone059
+        weight: 1
+      - path: SwingingMaceTrap004/Group051/Bone059/Bone060
+        weight: 1
+      - path: SwingingMaceTrap004/Group051/Mace004
+        weight: 1
+      - path: SwingingMaceTrap004/Group051/MaceTrap_Frame004
+        weight: 1
+      - path: Treasure343
+        weight: 1
+      - path: Treasure344
+        weight: 1
+      - path: Treasure345
+        weight: 1
+      - path: Treasure346
+        weight: 1
+      - path: Treasure347
+        weight: 1
+      - path: Treasure348
+        weight: 1
+      - path: Treasure349
+        weight: 1
+      - path: Treasure350
+        weight: 1
+      - path: TreauserChest438
+        weight: 1
+      - path: Tree
+        weight: 1
+      - path: Tree_01d001
+        weight: 1
+      - path: Tree_02b001
+        weight: 1
+      - path: Tree_02c001
+        weight: 1
+      - path: Trees156
+        weight: 1
+      - path: Vine_003
+        weight: 1
+      - path: Vine_004
+        weight: 1
+      - path: Vine_005
+        weight: 1
+      - path: Vine_006
+        weight: 1
+      - path: Vine_007
+        weight: 1
+      - path: Wall_Pillar_013
+        weight: 1
+      - path: Wall_Pillar_028
+        weight: 1
+      - path: Wall_Pillar_029
+        weight: 1
+      - path: Wall_Pillar_030
+        weight: 1
+      - path: Wall_Pillar_031
+        weight: 1
+      - path: Wall_Pillar_032
+        weight: 1
+      - path: Wall_Pillar_033
+        weight: 1
+      - path: Wall_Pillar_034
+        weight: 1
+      - path: Wall_Pillar_035
+        weight: 1
+      - path: Wall_Pillar_036
+        weight: 1
+      - path: Wall_Pillar_037
+        weight: 1
+      - path: z001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
