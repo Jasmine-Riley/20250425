@@ -8,8 +8,7 @@ public class PuzzleManager : MonoBehaviour
     private Dictionary<PuzzleSlot, Puzzle> slots = new Dictionary<PuzzleSlot, Puzzle>();
 
     private PuzzleSlot nowPuzzleSlot;
-    private PuzzleSlot selectedPuzzleSlot;
-    private Puzzle selectedPuzzle;
+    private Puzzle selectedPuzzleSlice;
 
     private GameObject player;
 
@@ -36,18 +35,15 @@ public class PuzzleManager : MonoBehaviour
             controller.RemoveButtonInteraction();
 
         UIManager.OnPressBtnSlot1 += Select;
+
+        Invoke("MixPuzzle", 1f);
     }
 
     private void Update()
     {
-        //if (!selectedPuzzleSlot) return;
+        if (!selectedPuzzleSlice) return;
 
-        //selectedPuzzleSlot.puzzle.transform.position = player.transform.position;
-
-        if (!selectedPuzzle) return;
-
-        selectedPuzzle.transform.position = player.transform.position;
-            
+        selectedPuzzleSlice.transform.position = player.transform.position;
     }
 
     public void Current(PuzzleSlot slot)
@@ -63,62 +59,150 @@ public class PuzzleManager : MonoBehaviour
 
     public void Select()
     {
-        //if (!selectedPuzzleSlot)
-        //    selectedPuzzleSlot = nowPuzzleSlot;
-        //else
-        //{
-        //    if (selectedPuzzleSlot == nowPuzzleSlot) return;
-
-        //    ChangeSlot(selectedPuzzleSlot, nowPuzzleSlot);
-        //    selectedPuzzleSlot = null;
-        //}
-        Debug.Log("선택");
-
-        if (!selectedPuzzle)
-            PutUpPuzzle(nowPuzzleSlot);
-        else
-        {
+        if (selectedPuzzleSlice)
             PutDownPuzzle(nowPuzzleSlot);
-            //ChangeSlot(selectedPuzzleSlot, nowPuzzleSlot);
-            //selectedPuzzleSlot = null;
-        }
+        else
+            PutUpPuzzle(nowPuzzleSlot);
     }
 
     public void PutUpPuzzle(PuzzleSlot slot)
     {
-        Debug.Log("들어올려");
-        selectedPuzzle = slot.puzzle;
-        slot.puzzle = null;
+        if (!slot) return;
 
-        Debug.Log(selectedPuzzle.name);
+        if (slot.puzzle)
+        {
+            selectedPuzzleSlice = slot.puzzle;
+            if (selectedPuzzleSlice.transform.GetChild(0).TryGetComponent<OutLineEffecter>(out var lineEffecter))
+                lineEffecter.SetEffect(true);
+
+            PutPuzzleSlice(slot, null);
+        }
     }
 
     public void PutDownPuzzle(PuzzleSlot slot)
     {
-        var puzzle = slot.puzzle;
+        if (!slot) return;
 
-        slot.puzzle = selectedPuzzle;
-        selectedPuzzle = null;
+        var nowPuzzle = selectedPuzzleSlice;
 
-        if (puzzle)
-            selectedPuzzle = puzzle;
+        if (selectedPuzzleSlice.transform.GetChild(0).TryGetComponent<OutLineEffecter>(out var lineEffecter))
+            lineEffecter.SetEffect(false);
+        selectedPuzzleSlice = null;
+
+        PutUpPuzzle(slot);
+
+        PutPuzzleSlice(slot, nowPuzzle);
+
+        //slot.puzzle = nowPuzzle;
+        //nowPuzzle.transform.SetParent(slot.transform);
+        //nowPuzzle.transform.localPosition = Vector3.zero;
+
+        //slots[slot] = nowPuzzle;
     }
 
-    public void ChangeSlot(PuzzleSlot slot1, PuzzleSlot slot2)
+    private void MixPuzzle()
     {
-        Puzzle puzzleSlice = slot1.puzzle;
-        slots[slot1] = slot2.puzzle;
-        if (slots.TryGetValue(slot1, out var puzzle1))
+        List<PuzzleSlot> puzzleSlots = new List<PuzzleSlot>();
+        List<Puzzle> puzzleSlices = new List<Puzzle>();
+        Puzzle puzzleSlice;
+        foreach(var key in slots.Keys)
         {
-            puzzle1.transform.SetParent(slot1.transform);
-            puzzle1.transform.localPosition = Vector3.zero;
+            slots.TryGetValue(key, out puzzleSlice);
+            puzzleSlots.Add(key);
+            puzzleSlices.Add(puzzleSlice);
         }
 
-        slots[slot2] = puzzleSlice;
-        if (slots.TryGetValue(slot2, out var puzzle2))
+        for(int i = 0; i < puzzleSlots.Count; i++)
         {
-            puzzle2.transform.SetParent(slot2.transform);
-            puzzle2.transform.localPosition = Vector3.zero;
+            puzzleSlice = puzzleSlices[Random.Range(0, puzzleSlices.Count)];
+            puzzleSlices.Remove(puzzleSlice);
+
+            slots[puzzleSlots[i]] = puzzleSlice;
         }
+
+        //foreach(var key in slots.Keys)
+        //{
+        //    puzzleSlice = puzzleSlices[Random.Range(0, puzzleSlices.Count)];
+        //    slots[key] = puzzleSlice;
+        //    puzzleSlices.Remove(puzzleSlice);
+        //}
+
+        ArrangePuzzle();
+    }
+
+    private void ArrangePuzzle()
+    {
+        List<PuzzleSlot> puzzleSlots = new List<PuzzleSlot>();
+
+        Puzzle puzzleSlice;
+        foreach (var key in slots.Keys)
+        {
+            puzzleSlots.Add(key);
+        }
+
+        for (int i = 0; i < puzzleSlots.Count; i++)
+        {
+            slots.TryGetValue(puzzleSlots[i], out puzzleSlice);
+            //PutPuzzleSlice(puzzleSlots[i], puzzleSlice);
+            StartCoroutine(PutPuzzleSliceTimer(puzzleSlots[i], puzzleSlice, 0.5f));
+        }
+    }
+
+    private void PutPuzzleSlice(PuzzleSlot slot, Puzzle slice)
+    {
+        slots[slot] = slice;
+        slot.puzzle = slice;
+
+        if (!slice) return;
+
+        slice.transform.SetParent(slot.transform);
+        slice.transform.localPosition = Vector3.zero;
+
+        Grading();
+    }
+
+    private IEnumerator PutPuzzleSliceTimer(PuzzleSlot slot, Puzzle slice, float time)
+    {
+        slots[slot] = slice;
+        slot.puzzle = slice;
+
+        if (slice)
+        {
+            slice.transform.SetParent(slot.transform);
+
+            var timer = 0f;
+            var currentPos = slice.transform.localPosition;
+            var endPos = Vector3.zero;
+
+            while (timer < time)
+            {
+                timer += Time.deltaTime;
+
+                slice.transform.localPosition = Vector3.Lerp(currentPos, endPos, timer / time);
+                yield return null;
+            }
+        }
+    }
+
+    private void Grading()
+    {
+        Puzzle correctSlice;
+        Puzzle nowSlice;
+        foreach(var key in correct.Keys)
+        {
+            correct.TryGetValue(key, out correctSlice);
+            slots.TryGetValue(key, out nowSlice);
+
+            //Debug.Log(correctSlice.transform.parent.name + "/" + nowSlice.transform.parent.name);
+            //Debug.Log(correctSlice.GetComponent<Puzzle>().puzzleSlot.name + "/" + nowSlice.GetComponent<Puzzle>().puzzleSlot.name);
+
+
+            if (nowSlice != correctSlice)
+            {
+                return;
+            }
+        }
+
+        Debug.Log("퍼즐 맞추기 성공!");
     }
 }

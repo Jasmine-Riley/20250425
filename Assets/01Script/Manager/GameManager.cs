@@ -14,13 +14,13 @@ public class GameManager : Singleton<GameManager>
 
     protected override void DoAwake()
     {
-        AssignManagers();
-        InitManagers();
+        //AssignManagers();
+        //InitManagers();
 
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
 
-        //if(player.TryGetComponent<PlayerController>(out var p))
-        //    p.Init();
+        ////if(player.TryGetComponent<PlayerController>(out var p))
+        ////    p.Init();
 
         SceneManager.sceneLoaded += (scene, mode) => {
             AssignManagers();
