@@ -1,150 +1,108 @@
 fileFormatVersion: 2
-guid: 77b222bb9cee96f4891199a8ca90fd61
-timeCreated: 1436029160
-licenseType: Store
+guid: 57e069efbd853e343b97f76060acb475
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: Object2171
-    100002: Object2172
-    100004: Object2173
-    100006: Object2174
-    100008: Object2175
-    100010: Object2176
-    100012: Object2177
-    100014: Object2178
-    100016: Object2179
-    100018: Object2180
-    100020: Object2192
-    100022: Object2193
-    100024: Object2195
-    100026: //RootNode
-    100028: WaterFall_01
-    100030: WaterFlow(MossMountain)
-    100032: WaterHalo
-    400000: Object2171
-    400002: Object2172
-    400004: Object2173
-    400006: Object2174
-    400008: Object2175
-    400010: Object2176
-    400012: Object2177
-    400014: Object2178
-    400016: Object2179
-    400018: Object2180
-    400020: Object2192
-    400022: Object2193
-    400024: Object2195
-    400026: WaterFall_01
-    400028: //RootNode
-    400030: WaterFlow(MossMountain)
-    400032: WaterHalo
-    2300000: Object2171
-    2300002: Object2172
-    2300004: Object2173
-    2300006: Object2174
-    2300008: Object2175
-    2300010: Object2176
-    2300012: Object2177
-    2300014: Object2178
-    2300016: Object2179
-    2300018: Object2180
-    2300020: Object2192
-    2300022: Object2193
-    2300024: Object2195
-    2300026: WaterFall_01
-    2300028: //RootNode
-    2300030: WaterFlow(MossMountain)
-    2300032: WaterHalo
-    3300000: Object2171
-    3300002: Object2172
-    3300004: Object2173
-    3300006: Object2174
-    3300008: Object2175
-    3300010: Object2176
-    3300012: Object2177
-    3300014: Object2178
-    3300016: Object2179
-    3300018: Object2180
-    3300020: Object2192
-    3300022: Object2193
-    3300024: Object2195
-    3300026: //RootNode
-    3300028: WaterFall_01
-    3300030: WaterFlow(MossMountain)
-    3300032: WaterHalo
-    4300000: Object2170
-    4300002: WaterFall_01
-    4300004: WaterFlow(MossMountain)
-    4300006: Object2171
-    4300008: Object2172
-    4300010: Object2173
-    4300012: Object2174
-    4300014: Object2175
-    4300016: Object2176
-    4300018: Object2177
-    4300020: Object2178
-    4300022: Object2179
-    4300024: Object2180
-    4300026: Object2193
-    4300028: Object2192
-    4300030: WaterHalo
-    4300032: Object2195
-    9500000: //RootNode
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
     importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

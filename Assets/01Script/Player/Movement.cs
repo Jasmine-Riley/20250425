@@ -4,6 +4,8 @@ public class Movement : MonoBehaviour, IMove
 {
     private CharacterController controller;
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float jump = 0.02f;
+
     public bool movable { get; protected set; }
     private Vector3 moveVect;
 
@@ -31,6 +33,6 @@ public class Movement : MonoBehaviour, IMove
     public void Jump()
     {
         if(controller.isGrounded)
-            moveVect.y = 0.02f;
+            moveVect.y = jump;
     }
 }

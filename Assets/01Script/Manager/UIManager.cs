@@ -24,6 +24,10 @@ public class UIManager : Singleton<UIManager>
     private TextMeshProUGUI chatterNameText;
     private TextMeshProUGUI chatText;
 
+    private GameObject status;
+    private GameObject hpStatus;
+    private TextMeshProUGUI timer;
+
 
     private Camera uiCamera;
 
@@ -60,6 +64,11 @@ public class UIManager : Singleton<UIManager>
         chat.transform.GetChild(0).TryGetComponent<Image>(out  chatterImage);
         chat.transform.GetChild(1).TryGetComponent<TextMeshProUGUI>(out chatterNameText);
         chat.transform.GetChild(2).TryGetComponent<TextMeshProUGUI>(out chatText);
+
+        status = ui.transform.GetChild(num++).gameObject;
+        hpStatus = status.transform.GetChild(0).gameObject;
+        status.transform.GetChild(1).TryGetComponent<TextMeshProUGUI>(out timer);
+
         //if (chat.transform.GetChild(3).TryGetComponent<Button>(out var skipBtn))
         //    skipBtn.onClick.AddListener(ScenarioManager.Instance.StopStory);
 
@@ -191,6 +200,27 @@ public class UIManager : Singleton<UIManager>
         chatterNameText.text = name;
         chatText.text = chat;
     }
+
+    public void SetHpUI(int n)
+    {
+        int i;
+        for(i = 0; i < n; i++)
+            hpStatus.transform.GetChild(i).gameObject.SetActive(true);
+
+        for(; i < hpStatus.transform.childCount; i++)
+            hpStatus.transform.GetChild(i).gameObject.SetActive(false);
+    }
+
+    public void SetTimer(float time)
+    {
+        timer.text = ((int)time).ToString();
+    }
+
+
+
+
+
+
 
     private void TouchBlock(bool tf)
     {

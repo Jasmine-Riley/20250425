@@ -8,6 +8,6 @@ public class PoolManager : SingletonDestroy<PoolManager>
 
     public void Init()
     {
-        transform.GetChild(0).TryGetComponent<Pool>(out enemyPool);
+        //transform.GetChild(0).TryGetComponent<Pool>(out enemyPool);
     }
 }

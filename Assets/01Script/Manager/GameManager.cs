@@ -51,4 +51,9 @@ public class GameManager : Singleton<GameManager>
     {
         volume.enabled = tf;
     }
+
+    public void GameOver()
+    {
+        Debug.Log("Å»¶ô");
+    }
 }
