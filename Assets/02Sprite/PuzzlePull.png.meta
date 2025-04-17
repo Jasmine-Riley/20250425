@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 72
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,11 +114,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 240
-        width: 120
-        height: 120
+        y: 170.66666
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: PuzzlePull_1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 240
-        width: 120
-        height: 120
+        x: 85
+        y: 170.66666
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: PuzzlePull_2
       rect:
         serializedVersion: 2
-        x: 240
-        y: 240
-        width: 120
-        height: 120
+        x: 170
+        y: 170.66666
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,11 +177,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
-        width: 120
-        height: 120
+        y: 85.666664
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: PuzzlePull_4
       rect:
         serializedVersion: 2
-        x: 120
-        y: 120
-        width: 120
-        height: 120
+        x: 85
+        y: 85.666664
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: PuzzlePull_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 120
-        width: 120
-        height: 120
+        x: 170
+        y: 85.666664
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,11 +240,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 120
-        height: 120
+        y: 0.6666641
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: PuzzlePull_7
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 120
-        height: 120
+        x: 85
+        y: 0.6666641
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: PuzzlePull_8
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 120
-        height: 120
+        x: 170
+        y: 0.6666641
+        width: 85.333336
+        height: 85.333336
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
