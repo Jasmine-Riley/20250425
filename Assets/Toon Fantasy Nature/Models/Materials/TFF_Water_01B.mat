@@ -74,9 +74,9 @@ Material:
     - _Waves: 0
     - __dirty: 0
     m_Colors:
-    - _DeepColor: {r: 0.38431373, g: 0.5065575, b: 0.54901963, a: 1}
+    - _DeepColor: {r: 0.21124065, g: 0.4433962, b: 0.2631474, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FoamColor: {r: 0.3278302, g: 0.36525837, b: 0.5, a: 1}
-    - _FresnelColor: {r: 0.19607843, g: 0.59992784, b: 0.6039216, a: 1}
-    - _ShallowColor: {r: 0, g: 0.43644172, b: 0.4716981, a: 1}
+    - _FoamColor: {r: 0.027990391, g: 0.16037738, b: 0.03000203, a: 1}
+    - _FresnelColor: {r: 0.3964934, g: 0.8490566, b: 0.5145637, a: 1}
+    - _ShallowColor: {r: 0, g: 0.47058824, b: 0.046007156, a: 1}
   m_BuildTextureStacks: []
