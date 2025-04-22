@@ -9,26 +9,23 @@ public enum EnemyState
     Chase,
 }
 
-public class Enemy : PoolObject, IMove
+public class Enemy : PoolObject
 {
-    private NavMeshAgent agent;
     private EnemyState enemyState;
 
     private Vector3 direction;
     private bool movable = false;
-    private float speed = 5f;
+    private float speed = 2f;
     private GameObject target;
+    private Rigidbody rigid;
 
-    private void Awake()
+    public void Init(float speed)
     {
-        TryGetComponent<NavMeshAgent>(out agent);
-    }
+        TryGetComponent<Rigidbody>(out rigid);
 
-    public void Init()
-    {
         enemyState = EnemyState.Idle;
         movable = true;
-        agent.isStopped = false;
+        this.speed = speed;
 
         target = GameManager.Instance.Player;
         SetTarget(target);
@@ -59,23 +56,14 @@ public class Enemy : PoolObject, IMove
         ChangeState(EnemyState.Idle);
     }
 
-    public void Move(Vector3 direction)
-    {
-        transform.position += speed * Time.deltaTime * direction;
-    }
 
     private void SetMoveTarget(Vector3 newPos)
     {
-        // 새로운 포지션이 내비 메쉬가 있는 영역인지 검증 후에 이동
-        // 해당 좌표가 메쉬가 있는 위치인가?
-        var pos = newPos;
-        if (NavMesh.SamplePosition(pos, out NavMeshHit hitResult, 10f, NavMesh.AllAreas))
-        {
-            pos = hitResult.position;
-            agent.SetDestination(pos);
-        }
-        else
-            Debug.Log("도달 불가 영역");
+        direction = newPos - transform.position;
+        direction.y = 0;
+        direction.Normalize();
+
+        rigid.velocity = direction * speed;
     }
 
     public void SetTarget(GameObject newTarget)
@@ -85,10 +73,5 @@ public class Enemy : PoolObject, IMove
             target = newTarget;
             ChangeState(EnemyState.Chase);
         }
-    }
-
-    public void Jump()
-    {
-        throw new System.NotImplementedException();
     }
 }

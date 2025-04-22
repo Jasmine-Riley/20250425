@@ -2,37 +2,56 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour, IMove
 {
-    private CharacterController controller;
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float jump = 0.02f;
+    private Rigidbody rb;
+    private CapsuleCollider cc;
+
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask checkLayer;
+
+    [SerializeField] private float speed = 50f;
+    [SerializeField] private float jump = 15f;
 
     public bool movable { get; protected set; }
-    private Vector3 moveVect;
+
+    private bool isGrounded;
 
     private void Awake()
     {
         movable = true;
-        TryGetComponent<CharacterController>(out controller);
-    }
+        TryGetComponent<Rigidbody>(out rb);
+        TryGetComponent<CapsuleCollider>(out cc);
 
-    private void Update()
-    {
-        if(!controller.isGrounded)
-            moveVect.y += -9.81f * Time.deltaTime * 0.005f;
+        var n = Physics.gravity;
+        n.y = -40f;
+        Physics.gravity = n;
     }
-
+    
     public void Move(Vector3 direction)
     {
         if (!movable) return;
+        //if (direction == Vector3.zero) return;
 
-        var vect = speed * Time.deltaTime * direction;
-        vect.y = moveVect.y;
-        controller.Move(vect);
+        var vect = direction;
+        vect.y = 0;
+        var nomalizedVect = vect.normalized * speed;
+        nomalizedVect.y = rb.velocity.y;
+        rb.velocity = nomalizedVect;
     }
 
     public void Jump()
     {
-        if(controller.isGrounded)
-            moveVect.y = jump;
+        if (isGrounded)
+        {
+            rb.velocity = Vector3.zero;
+            rb.AddForce(jump * Vector3.up, ForceMode.Impulse);
+        }
+    }
+
+    private void Update()
+    {
+        if (Physics.OverlapSphere(groundCheck.position, 0.2f, checkLayer).Length > 0)
+            isGrounded = true;
+        else
+            isGrounded = false;
     }
 }

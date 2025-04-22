@@ -16,6 +16,8 @@ public class TitleSceneManager : MonoBehaviour
     [SerializeField] private GameObject popup;
     [SerializeField] private TextMeshProUGUI popupText;
 
+    List<GameObject> popups = new List<GameObject>();
+
     private bool hasPlayerInformation = false;
 
     private string nickName;
@@ -50,14 +52,22 @@ public class TitleSceneManager : MonoBehaviour
         // 데이터 유무 확인
         hasPlayerInformation = DataManager.Instance.isDataLoad;
 
-        var vectorZero = Vector3.zero;
+        //var vectorZero = Vector3.zero;
 
-        LeanTween.scale(loginPopup, vectorZero, 0.45f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(createAccountPopup, vectorZero, 0.45f).setEase(LeanTweenType.easeOutElastic);
+        //LeanTween.scale(loginPopup, vectorZero, 0.45f).setEase(LeanTweenType.easeOutElastic);
+        //LeanTween.scale(createAccountPopup, vectorZero, 0.45f).setEase(LeanTweenType.easeOutElastic);
         //LeanTween.scale(popup, vectorZero, 0.7f).setEase(LeanTweenType.easeOutElastic);
+        while(popups.Count > 0)
+        {
+            CloseCurrentPopup();
+        }
+
+        popups.Clear();
 
 
-        welcomeText.text = hasPlayerInformation ? "시작하기" : "로그인하기";
+
+
+        welcomeText.text = hasPlayerInformation ? "시작하기" : "화면을 터치해주세요";
         welcomeText.enabled = true;
 
     }
@@ -76,14 +86,18 @@ public class TitleSceneManager : MonoBehaviour
         {
             if (loginPopup.transform.localScale == Vector3.zero)
             {
-                loginPopup.SetActive(true);
+                //loginPopup.SetActive(true);
+                //LeanTween.scale(loginPopup, Vector3.one, 0.45f).setEase(LeanTweenType.easeOutElastic);
+                NewPopup(loginPopup);
+
                 welcomeText.enabled = false;
-                LeanTween.scale(loginPopup, Vector3.one, 0.45f).setEase(LeanTweenType.easeOutElastic);
             }
             else
             {
-                LeanTween.scale(loginPopup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
-                LeanTween.scale(createAccountPopup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+                //LeanTween.scale(loginPopup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+                //LeanTween.scale(createAccountPopup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+                NewPopup(createAccountPopup);
+
                 welcomeText.enabled = true;
 
                 Invoke("SetPopupsScaleZero", 0.3f);
@@ -101,8 +115,9 @@ public class TitleSceneManager : MonoBehaviour
 
     public void CreateAccountBtn()
     {
-        createAccountPopup.SetActive(true);
-        LeanTween.scale(createAccountPopup, Vector3.one, 0.45f).setEase(LeanTweenType.easeOutElastic);
+        NewPopup(createAccountPopup);
+        //createAccountPopup.SetActive(true);
+        //LeanTween.scale(createAccountPopup, Vector3.one, 0.45f).setEase(LeanTweenType.easeOutElastic);
     }
 
     private void GoogleLoginProcess()
@@ -176,17 +191,46 @@ public class TitleSceneManager : MonoBehaviour
     {
         touchEnable = false;
         popupText.text = txt;
-        popup.SetActive(true);
-        LeanTween.scale(popup, Vector3.one, 0.7f).setEase(LeanTweenType.easeOutElastic);
+
+        NewPopup(popup);
+
+        //popup.SetActive(true);
+        //LeanTween.scale(popup, Vector3.one, 0.7f).setEase(LeanTweenType.easeOutElastic);
     }
 
     public void OkayBtn()
     {
         touchEnable = true;
-        LeanTween.scale(popup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+
+        //LeanTween.scale(popup, Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+        CloseCurrentPopup();
+        if(func == null)
+            OpenBeforePopup();
 
         func?.Invoke();
         func = null;
+    }
+
+    private void NewPopup(GameObject popup)
+    {
+        if(popups.Count > 0)
+            LeanTween.scale(popups[popups.Count - 1], Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+
+        popups.Add(popup);
+        popup.SetActive(true);
+        LeanTween.scale(popup, Vector3.one, 0.7f).setEase(LeanTweenType.easeOutElastic);
+    }
+
+    public void CloseCurrentPopup()
+    {
+        LeanTween.scale(popups[popups.Count - 1], Vector3.zero, 0.3f).setEase(LeanTweenType.easeOutElastic);
+        popups.Remove(popups[popups.Count - 1]);
+    }
+
+    public void OpenBeforePopup()
+    {
+        if (popups.Count > 0)
+            LeanTween.scale(popups[popups.Count - 1], Vector3.one, 0.7f).setEase(LeanTweenType.easeOutElastic);
     }
 
     #endregion

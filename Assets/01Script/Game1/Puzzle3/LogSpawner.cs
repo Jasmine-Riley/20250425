@@ -7,7 +7,7 @@ public class LogSpawner : MonoBehaviour
     private GameObject log;
     [SerializeField] private Vector3 spawnPosition;
     private float endTime;
-    private float logSpeed = 2;
+    private float logSpeed = 4.5f;
 
 
     private void Start()
@@ -28,7 +28,7 @@ public class LogSpawner : MonoBehaviour
     private IEnumerator Spawn()
     {
         endTime = Time.time + 60;
-        
+        GameManager.Instance.SetTimer(60);
         //var player = GameManager.Instance.Player;
         while (Time.time < endTime)
         {
@@ -38,15 +38,15 @@ public class LogSpawner : MonoBehaviour
             if (log.TryGetComponent<LogMove>(out var logComponent))
                 logComponent.Init(logSpeed);
 
-            logSpeed += Random.Range(1, 5f);
+            logSpeed += Random.Range(1, 4f);
 
             var after = 7 - logSpeed * 0.1f;
             after = after < 6.5f ? after : 6.5f;
 
-            Debug.Log(after + "檬 第");
+            //Debug.Log(after + "檬 第");
             yield return YieldInstructionCache.WaitForSeconds(after);
         }
 
-        Debug.Log("家券 场");
+        //Debug.Log("家券 场");
     }
 }
