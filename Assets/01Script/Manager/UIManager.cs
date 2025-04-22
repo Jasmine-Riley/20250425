@@ -67,7 +67,7 @@ public class UIManager : Singleton<UIManager>
 
         status = ui.transform.GetChild(num++).gameObject;
         hpStatus = status.transform.GetChild(0).gameObject;
-        status.transform.GetChild(1).TryGetComponent<TextMeshProUGUI>(out timer);
+        status.transform.GetChild(1).GetChild(0).TryGetComponent<TextMeshProUGUI>(out timer);
 
         //if (chat.transform.GetChild(3).TryGetComponent<Button>(out var skipBtn))
         //    skipBtn.onClick.AddListener(ScenarioManager.Instance.StopStory);
@@ -213,14 +213,11 @@ public class UIManager : Singleton<UIManager>
 
     public void SetTimer(float time)
     {
-        timer.text = ((int)time).ToString();
+        status.SetActive(true);
+        timer.text = $"Time : {time}";
+
+        if (time < 1) status.SetActive(false);
     }
-
-
-
-
-
-
 
     private void TouchBlock(bool tf)
     {

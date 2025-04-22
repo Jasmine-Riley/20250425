@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -55,5 +56,28 @@ public class GameManager : Singleton<GameManager>
     public void GameOver()
     {
         Debug.Log("Å»¶ô");
+    }
+
+    public void SetTimer(float second)
+    {
+        StartCoroutine("Timer", second);
+        
+    }
+
+    public void StopTimer()
+    {
+        StopCoroutine("Timer");
+        uiManager.SetTimer(-1);
+    }
+
+    private IEnumerator Timer(float second)
+    {
+        var timer = second;
+        while(timer > 0)
+        {
+            yield return YieldInstructionCache.WaitForSeconds(1f);
+            timer -= 1f;
+            uiManager.SetTimer(timer);
+        }
     }
 }

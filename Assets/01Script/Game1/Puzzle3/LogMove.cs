@@ -26,13 +26,13 @@ public class LogMove : PoolObject, IMove
 
     public void Move(Vector3 direction)
     {
-        
         transform.position += speed * Time.deltaTime * direction;
     }
 
     public void Init(float speed)
     {
         this.speed = speed;
+        rigid.velocity = Vector3.zero;
 
         Invoke("DestorySelf", 15f);
     }

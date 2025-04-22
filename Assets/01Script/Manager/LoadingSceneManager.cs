@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class LoadingSceneManager : MonoBehaviour
 {
     [SerializeField] private Image loadingBar;
+    [SerializeField] private Image visualLoadingBar;
+
 
     private GameObject runner;
     private GameObject postBox;
@@ -23,8 +25,8 @@ public class LoadingSceneManager : MonoBehaviour
 
     private void Awake()
     {
-        postBox = loadingBar.transform.GetChild(0).gameObject;
-        runner = loadingBar.transform.GetChild(1).gameObject;
+        postBox = visualLoadingBar.transform.GetChild(0).gameObject;
+        runner = visualLoadingBar.transform.GetChild(1).gameObject;
 
         runnerRect = runner.GetComponent<RectTransform>();
 
@@ -89,6 +91,8 @@ public class LoadingSceneManager : MonoBehaviour
                 if (loadingBar.fillAmount >= asyncScene.progress)
                     timeC = 0.0f;
             }
+
+            visualLoadingBar.fillAmount = 1 - loadingBar.fillAmount;
             yield return null;
         }
     }

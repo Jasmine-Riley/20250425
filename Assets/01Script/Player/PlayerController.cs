@@ -28,11 +28,14 @@ public class PlayerController : MonoBehaviour
     {
         if (inputHandle is null) return;
 
-        var dir = cam.transform.localRotation * Vector3.forward;
 
-        //movement.Move(inputHandle.GetInput());
-        for (int i = 0; i < inputHandle.Length; i++)
-            movement.Move(inputHandle[i].GetInput());
+        Vector3 input = Vector3.zero;
+        for (int i = 0; i < inputHandle.Length; i++) {
+            if (inputHandle[i].GetInput() != Vector3.zero)
+                input = inputHandle[i].GetInput();
+        }
+
+        movement.Move(input);
 
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -56,8 +59,6 @@ public class PlayerController : MonoBehaviour
 
     public void SetHp(int value)
     {
-
-        Debug.Log(value);
         hp = value;
         OnChangeHp?.Invoke(value);
     }

@@ -72,8 +72,7 @@ public class PuzzleManager : MonoBehaviour
         if (slot.puzzle)
         {
             selectedPuzzleSlice = slot.puzzle;
-            //if (selectedPuzzleSlice.transform.GetChild(0).TryGetComponent<OutLineEffecter>(out var lineEffecter))
-            //    lineEffecter.SetEffect(true);
+            selectedPuzzleSlice.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
             PutPuzzleSlice(slot, null);
         }
@@ -84,6 +83,7 @@ public class PuzzleManager : MonoBehaviour
         if (!slot) return;
 
         var nowPuzzle = selectedPuzzleSlice;
+        selectedPuzzleSlice.GetComponent<SpriteRenderer>().sortingOrder = 0;
 
         //if (selectedPuzzleSlice.transform.GetChild(0).TryGetComponent<OutLineEffecter>(out var lineEffecter))
         //    lineEffecter.SetEffect(false);
@@ -182,6 +182,9 @@ public class PuzzleManager : MonoBehaviour
                 yield return null;
             }
         }
+
+
+        GameManager.Instance.SetTimer(61f);
     }
 
     private void Grading()
@@ -203,6 +206,6 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
-        Debug.Log("퍼즐 맞추기 성공!");
+        GameManager.Instance.StopTimer();
     }
 }

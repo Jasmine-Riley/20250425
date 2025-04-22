@@ -23,14 +23,78 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        var player = GameManager.Instance.Player;
-        while(true)
+        for (int j = 0; j < 4; j++)
         {
-            enemy = PoolManager.Instance.enemyPool.GetPoolObject();
-            enemy.transform.position = player.transform.position + new Vector3(Random.Range(3f, 5f), 0, Random.Range(3f, 5f));
-            if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                enemyComponent.Init();
+            for (int i = 0; i < 2; i++)
+            {
+                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy.transform.position = GetSpawnPosition();
+                if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
+                    enemyComponent.Init(4.5f);
+            }
             yield return YieldInstructionCache.WaitForSeconds(5f);
         }
+
+        for (int j = 0; j < 4; j++)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy.transform.position = GetSpawnPosition();
+                if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
+                    enemyComponent.Init(4.5f);
+            }
+            for (int i = 0; i < 1; i++)
+            {
+                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy.transform.position = GetSpawnPosition();
+                if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
+                    enemyComponent.Init(13f);
+            }
+            yield return YieldInstructionCache.WaitForSeconds(5f);
+        }
+
+
+        for (int j = 0; j < 4; j++)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy.transform.position = GetSpawnPosition();
+                if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
+                    enemyComponent.Init(4.5f);
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy.transform.position = GetSpawnPosition();
+                if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
+                    enemyComponent.Init(13f);
+            }
+            yield return YieldInstructionCache.WaitForSeconds(5f);
+        }
+
+    }
+
+    private Vector3 GetSpawnPosition()
+    {
+        var player = GameManager.Instance.Player;
+
+        var n = Mathf.Pow(-1, Random.Range(0, 2));
+
+        Vector3 spawnPos = player.transform.position;
+        spawnPos.y = 1;
+
+        if(n == -1)
+        { // horizon
+            spawnPos.x += Random.Range(-18f, 18f);
+            spawnPos.z += 15f * Mathf.Pow(-1, Random.Range(0, 2));
+        }
+        if(n == 1)
+        { // vertical
+            spawnPos.x += 18f * Mathf.Pow(-1, Random.Range(0, 2));
+            spawnPos.z += Random.Range(-15f, 15f);
+        }
+        return spawnPos;
     }
 }
