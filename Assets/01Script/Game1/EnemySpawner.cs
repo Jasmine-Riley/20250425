@@ -23,6 +23,8 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
+        GameManager.Instance.SetTimer(60);
+
         for (int j = 0; j < 4; j++)
         {
             for (int i = 0; i < 2; i++)

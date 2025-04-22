@@ -214,7 +214,7 @@ public class UIManager : Singleton<UIManager>
     public void SetTimer(float time)
     {
         status.SetActive(true);
-        timer.text = $"Time : {time}";
+        timer.text = $"{(int)time / 60}:{time % 60}";
 
         if (time < 1) status.SetActive(false);
     }

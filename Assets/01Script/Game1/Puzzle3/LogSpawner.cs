@@ -7,7 +7,7 @@ public class LogSpawner : MonoBehaviour
     private GameObject log;
     [SerializeField] private Vector3 spawnPosition;
     private float endTime;
-    private float logSpeed = 4.5f;
+    private float logSpeed = 2.5f;
 
 
     private void Start()
@@ -40,8 +40,8 @@ public class LogSpawner : MonoBehaviour
 
             logSpeed += Random.Range(1, 4f);
 
-            var after = 7 - logSpeed * 0.1f;
-            after = after < 6.5f ? after : 6.5f;
+            var after = 2.5f - logSpeed * 0.05f;
+            after = after < 1.5f ? 1.5f : after;
 
             //Debug.Log(after + "ÃÊ µÚ");
             yield return YieldInstructionCache.WaitForSeconds(after);
