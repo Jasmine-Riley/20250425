@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        GameManager.Instance.SetTimer(60);
+        GameManager.Instance.SetTimer(60, () => UIManager.Instance.OpenClearPopup(true));
 
         for (int j = 0; j < 4; j++)
         {
@@ -48,10 +48,10 @@ public class EnemySpawner : MonoBehaviour
             }
             for (int i = 0; i < 1; i++)
             {
-                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy = PoolManager.Instance.enemyPool2.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(13f);
+                    enemyComponent.Init(9f);
             }
             yield return YieldInstructionCache.WaitForSeconds(5f);
         }
@@ -68,10 +68,10 @@ public class EnemySpawner : MonoBehaviour
             }
             for (int i = 0; i < 2; i++)
             {
-                enemy = PoolManager.Instance.enemyPool.GetPoolObject();
+                enemy = PoolManager.Instance.enemyPool2.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(13f);
+                    enemyComponent.Init(9f);
             }
             yield return YieldInstructionCache.WaitForSeconds(5f);
         }

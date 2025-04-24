@@ -28,7 +28,7 @@ public class LogSpawner : MonoBehaviour
     private IEnumerator Spawn()
     {
         endTime = Time.time + 60;
-        GameManager.Instance.SetTimer(60);
+        GameManager.Instance.SetTimer(60, () => UIManager.Instance.OpenClearPopup(true));
         //var player = GameManager.Instance.Player;
         while (Time.time < endTime)
         {

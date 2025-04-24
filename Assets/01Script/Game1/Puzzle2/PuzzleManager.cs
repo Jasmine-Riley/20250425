@@ -184,7 +184,7 @@ public class PuzzleManager : MonoBehaviour
         }
 
 
-        GameManager.Instance.SetTimer(61f);
+        GameManager.Instance.SetTimer(61f, () => UIManager.Instance.OpenClearPopup(false));
     }
 
     private void Grading()
@@ -206,6 +206,7 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
+        UIManager.Instance.OpenClearPopup(true);
         GameManager.Instance.StopTimer();
     }
 }
