@@ -28,6 +28,18 @@ public class UIManager : Singleton<UIManager>
     private GameObject hpStatus;
     private TextMeshProUGUI timer;
 
+    private GameObject playMenu;
+
+    private GameObject star;
+
+    private GameObject menuPopup;
+
+
+
+    private GameObject popup;
+
+    private GameObject clearPopup;
+
 
     private Camera uiCamera;
 
@@ -69,13 +81,31 @@ public class UIManager : Singleton<UIManager>
         hpStatus = status.transform.GetChild(0).gameObject;
         status.transform.GetChild(1).GetChild(0).TryGetComponent<TextMeshProUGUI>(out timer);
 
-        //if (chat.transform.GetChild(3).TryGetComponent<Button>(out var skipBtn))
-        //    skipBtn.onClick.AddListener(ScenarioManager.Instance.StopStory);
+        playMenu = ui.transform.GetChild(num++).gameObject;
+        Button btn;
+        playMenu.transform.GetChild(0).TryGetComponent<Button>(out btn);
+        btn.onClick.AddListener(() => OpenMenuPopup());
+        TwoStateButton twobtn;
+        playMenu.transform.GetChild(1).TryGetComponent<TwoStateButton>(out twobtn);
+        twobtn.OnClick += () => GameManager.Instance.MusicOnOFF(twobtn.onT_offF);
+        playMenu.transform.GetChild(2).TryGetComponent<TwoStateButton>(out twobtn);
+        twobtn.OnClick += () => GameManager.Instance.StopResume(twobtn.onT_offF);
+
+
+        star = ui.transform.GetChild(num++).gameObject;
+
+        menuPopup = ui.transform.GetChild(num++).gameObject;
+
+        popup = ui.transform.GetChild(num++).gameObject;
+
+        clearPopup = ui.transform.GetChild(num++).gameObject;
+
+
 
         if (!useTouchPad) return;
 
         obj = GameObject.Find("BtnSlot1");
-        obj.TryGetComponent<Button>(out var btn);
+        obj.TryGetComponent<Button>(out btn);
         btn.onClick.AddListener(()=>HandleButtonClick(ButtonType.Slot1));
 
         //obj = GameObject.Find("BtnSlot2");
@@ -83,6 +113,7 @@ public class UIManager : Singleton<UIManager>
         //btn.onClick.AddListener(() => HandleButtonClick(ButtonType.Slot2));
 
     }
+
 
     private void HandleButtonClick(ButtonType type)
     {
@@ -218,6 +249,31 @@ public class UIManager : Singleton<UIManager>
 
         if (time < 1) status.SetActive(false);
     }
+
+    private void OpenMenuPopup()
+    {
+        menuPopup.SetActive(!menuPopup.activeSelf);
+    }
+
+    private void OpenPopup()
+    {
+
+    }
+
+    private void OpenClearPopup()
+    {
+
+    }
+
+
+
+
+
+
+
+
+
+
 
     private void TouchBlock(bool tf)
     {

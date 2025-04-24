@@ -80,4 +80,17 @@ public class GameManager : Singleton<GameManager>
             uiManager.SetTimer(timer);
         }
     }
+
+    public void MusicOnOFF(bool tf)
+    {
+
+    }
+
+    public void StopResume(bool tf)
+    {
+        if(!tf)
+            Time.timeScale = 0f;
+        else
+            Time.timeScale = 1f;
+    }
 }
