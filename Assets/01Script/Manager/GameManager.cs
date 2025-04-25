@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -12,6 +13,8 @@ public class GameManager : Singleton<GameManager>
 
     private GameObject player;
     public GameObject Player { get => player; }
+
+    public Action OnTimerStop;
 
     protected override void DoAwake()
     {
@@ -55,17 +58,20 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        Debug.Log("Å»¶ô");
+        StopTimer();
+        UIManager.Instance.OpenClearPopup(false);
     }
 
-    public void SetTimer(float second)
+    public void SetTimer(float second, Action action = null)
     {
+        if(action != null)
+            OnTimerStop += action;
         StartCoroutine("Timer", second);
-        
     }
 
     public void StopTimer()
     {
+        OnTimerStop = null;
         StopCoroutine("Timer");
         uiManager.SetTimer(-1);
     }
@@ -73,11 +79,43 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator Timer(float second)
     {
         var timer = second;
+
         while(timer > 0)
         {
             yield return YieldInstructionCache.WaitForSeconds(1f);
             timer -= 1f;
             uiManager.SetTimer(timer);
         }
+        OnTimerStop?.Invoke();
+    }
+
+    public void MusicOnOFF(bool tf)
+    {
+
+    }
+
+    public void StopResume(bool tf)
+    {
+        if(!tf)
+            Time.timeScale = 0f;
+        else
+            Time.timeScale = 1f;
+    }
+
+    public void RestartGame()
+    {
+        LoadingSceneManager.SetNextScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+    public void ReturnToLobby()
+    {
+        LoadingSceneManager.SetNextScene("LobbyScene");
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+    public void GameQuit()
+    {
+        Application.Quit();
     }
 }

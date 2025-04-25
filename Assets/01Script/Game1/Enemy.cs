@@ -18,10 +18,13 @@ public class Enemy : PoolObject
     private float speed = 2f;
     private GameObject target;
     private Rigidbody rigid;
+    private Animator anim;
 
     public void Init(float speed)
     {
         TryGetComponent<Rigidbody>(out rigid);
+        anim = GetComponentInChildren<Animator>();
+        anim.speed = speed;
 
         enemyState = EnemyState.Idle;
         movable = true;
@@ -51,17 +54,34 @@ public class Enemy : PoolObject
         while (target != null)
         {
             SetMoveTarget(target.transform.position);
-            yield return YieldInstructionCache.WaitForSeconds(1f);
+            yield return YieldInstructionCache.WaitForSeconds(0.8f);
         }
         ChangeState(EnemyState.Idle);
+    }
+
+    private IEnumerator ChangeDirection(Vector3 before, Vector3 after)
+    {
+        float timer = 0f;
+
+        while(timer < 0.4f)
+        {
+            transform.rotation = Quaternion.LookRotation(Vector3.Lerp(before, after, timer / 0.4f));
+            //transform.rotation = Quaternion.LookRotation(direction);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
     }
 
 
     private void SetMoveTarget(Vector3 newPos)
     {
+        var origin = direction;
         direction = newPos - transform.position;
         direction.y = 0;
         direction.Normalize();
+        //transform.rotation = Quaternion.LookRotation(direction);
+        StartCoroutine(ChangeDirection(origin, direction));
 
         rigid.velocity = direction * speed;
     }

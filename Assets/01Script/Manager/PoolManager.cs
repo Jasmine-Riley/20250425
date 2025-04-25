@@ -5,6 +5,7 @@ using UnityEngine;
 public class PoolManager : SingletonDestroy<PoolManager>
 {
     public Pool enemyPool;
+    public Pool enemyPool2;
 
     public void Init()
     {
