@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,20 +8,22 @@ public class ScenarioManager : SingletonDestroy<ScenarioManager>
     private Dictionary<int, ChatData> story;
     private int page = 0;
 
+    public Action OnStoryEnd;
+
     public void StartStory(string typeName)
     {
         var type = StoryType.ContaminatedMushrooms;
         switch (typeName)
         {
             case "ContaminatedMushrooms": type = StoryType.ContaminatedMushrooms     ;             break;
-            case "Virus                ": type = StoryType.Virus                     ;             break;
-            case "MysteriousTree       ": type = StoryType.MysteriousTree            ;             break;
-            case "DollClawMachine      ": type = StoryType.DollClawMachine           ;             break;
-            case "RabbitDoll           ": type = StoryType.RabbitDoll                ;             break;
-            case "FoodTruck            ": type = StoryType.FoodTruck                 ;             break;
-            case "FallenLeaves         ": type = StoryType.FallenLeaves              ;             break;
-            case "Log                  ": type = StoryType.Log                       ;             break;
-            case "RumiHouse            ": type = StoryType.RumiHouse                 ;             break;
+            case "Virus"                : type = StoryType.Virus                     ;             break;
+            case "MysteriousTree"       : type = StoryType.MysteriousTree            ;             break;
+            case "DollClawMachine"      : type = StoryType.DollClawMachine           ;             break;
+            case "RabbitDoll"           : type = StoryType.RabbitDoll                ;             break;
+            case "FoodTruck"            : type = StoryType.FoodTruck                 ;             break;
+            case "FallenLeaves"         : type = StoryType.FallenLeaves              ;             break;
+            case "Log"                  : type = StoryType.Log                       ;             break;
+            case "RumiHouse"            : type = StoryType.RumiHouse                 ;             break;
             default:
                 break;
         }
@@ -40,6 +43,9 @@ public class ScenarioManager : SingletonDestroy<ScenarioManager>
 
     public void StopStory()
     {
+        OnStoryEnd?.Invoke();
+        OnStoryEnd = null;
+
         story = null;
         page = 0;
         UIManager.Instance.CloseScenarioPannel();

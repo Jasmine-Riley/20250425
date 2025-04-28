@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,9 +7,8 @@ public class PlayerController : MonoBehaviour
     private IMove movement;
     private IInputHandle[] inputHandle;
 
-    private Camera cam;
-
     private int hp = 3;
+    private bool hittable = true;
 
     private event Action<int> OnChangeHp;
 
@@ -19,9 +19,8 @@ public class PlayerController : MonoBehaviour
         inputHandle = GetComponents<IInputHandle>();
         UIManager.OnPressBtnSlot1 += movement.Jump;
 
-        cam = Camera.main;
-
         OnChangeHp += UIManager.Instance.SetHpUI;
+        OnChangeHp?.Invoke(hp);
     }
 
     private void Update()
@@ -49,12 +48,39 @@ public class PlayerController : MonoBehaviour
 
     public void GetDamage(int damage)
     {
+        if (!hittable) return;
+
         if (hp > 0)
         {
             SetHp(hp - damage);
+            OnHit();
             if (hp <= 0)
                 GameManager.Instance.GameOver();
         }
+    }
+
+    private void OnHit()
+    {
+        hittable = false;
+        StartCoroutine("HitEffect");
+    }
+
+    private IEnumerator HitEffect()
+    {
+        float time = 0f;
+        while (time < 0.5f) {
+            time += Time.deltaTime;
+            UIManager.Instance.BloodScreen(time / 0.5f);
+            yield return null;
+        }
+        time = 0f;
+        while (time < 0.5f)
+        {
+            time += Time.deltaTime;
+            UIManager.Instance.BloodScreen(1 - (time / 0.5f));
+            yield return null;
+        }
+        hittable = true;
     }
 
     public void SetHp(int value)
@@ -62,4 +88,5 @@ public class PlayerController : MonoBehaviour
         hp = value;
         OnChangeHp?.Invoke(value);
     }
+
 }

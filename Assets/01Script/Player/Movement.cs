@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum Start
+{
+    Forward = 0,
+    Right = 90,
+    Backward = 180,
+    Left = 270,
+}
+
 public class Movement : MonoBehaviour, IMove
 {
     private Rigidbody rb;
@@ -10,6 +18,12 @@ public class Movement : MonoBehaviour, IMove
 
     [SerializeField] private float speed = 50f;
     [SerializeField] private float jump = 15f;
+
+
+    [SerializeField] private bool reverseMode = false;
+
+    [SerializeField] private int startAngle = (int)Start.Forward;
+
 
     public bool movable { get; protected set; }
 
@@ -22,7 +36,7 @@ public class Movement : MonoBehaviour, IMove
         TryGetComponent<CapsuleCollider>(out cc);
 
         var n = Physics.gravity;
-        n.y = -40f;
+        n.y = -80f;
         Physics.gravity = n;
     }
     
@@ -31,10 +45,31 @@ public class Movement : MonoBehaviour, IMove
         if (!movable) return;
         //if (direction == Vector3.zero) return;
 
-        var vect = direction;
-        vect.y = 0;
-        var nomalizedVect = vect.normalized * speed;
+
+        Vector3 nomalizedVect = direction.normalized;
+        nomalizedVect.y = 0;
+
+        switch (startAngle)
+        {
+            case (int)Start.Forward:
+                nomalizedVect = nomalizedVect * speed;
+                break;
+            case (int)Start.Left:
+                nomalizedVect = new Vector3(-nomalizedVect.z, 0, nomalizedVect.x) * speed;
+                break;
+            case (int)Start.Backward:
+                nomalizedVect = -nomalizedVect * speed;
+                break;
+            case (int)Start.Right:
+                nomalizedVect = new Vector3(nomalizedVect.z, 0, -nomalizedVect.x) * speed;
+                break;
+        }
+
+        if (direction != Vector3.zero)
+            transform.forward = nomalizedVect;
+
         nomalizedVect.y = rb.velocity.y;
+
         rb.velocity = nomalizedVect;
     }
 
@@ -53,5 +88,10 @@ public class Movement : MonoBehaviour, IMove
             isGrounded = true;
         else
             isGrounded = false;
+    }
+
+    public void SetMove(Start angle)
+    {
+        startAngle = (int)angle;
     }
 }

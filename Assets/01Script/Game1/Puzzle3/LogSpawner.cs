@@ -40,13 +40,24 @@ public class LogSpawner : MonoBehaviour
 
             logSpeed += Random.Range(1, 4f);
 
-            var after = 2.5f - logSpeed * 0.05f;
-            after = after < 1.5f ? 1.5f : after;
+            var after = 3.5f - logSpeed * 0.05f;
 
+            after = after < 1f ? 1f : after;
+            //if (endTime - Time.time > 30f)
+
+            logSpeed = logSpeed < 35f ? logSpeed : 35f;
+            if (logSpeed > 25f)
+                after *= Random.Range(0.5f, 0.7f);
+            else
+                after *= Random.Range(0.7f, 0.9f);
+
+
+            Debug.Log(logSpeed);
             //Debug.Log(after + "초 뒤");
             yield return YieldInstructionCache.WaitForSeconds(after);
         }
 
         //Debug.Log("소환 끝");
     }
+
 }
