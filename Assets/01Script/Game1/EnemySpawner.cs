@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     private GameObject enemy;
+    private List<Enemy> enemies = new List<Enemy>();
 
     private void Start()
     {
@@ -14,11 +15,23 @@ public class EnemySpawner : MonoBehaviour
     private void StartSpawn()
     {
         StartCoroutine("Spawn");
+        StartCoroutine("Upgrade");
     }
 
     private void StopSpawn()
     {
+        StopEnemys();
         StopCoroutine("Spawn");
+        StopCoroutine("Upgrade");
+    }
+
+    private void StopEnemys()
+    {
+        for(int i = 0; i < enemies.Count; i++)
+        {
+            enemies[i].Stop();
+            Destroy(enemies[i].gameObject);
+        }
     }
 
     private IEnumerator Spawn()
@@ -32,7 +45,10 @@ public class EnemySpawner : MonoBehaviour
                 enemy = PoolManager.Instance.enemyPool.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(4.5f);
+                {
+                    enemyComponent.Init(this, Random.Range(4.5f, 5.5f));
+                    enemies.Add(enemyComponent);
+                }
             }
             yield return YieldInstructionCache.WaitForSeconds(5f);
         }
@@ -44,14 +60,21 @@ public class EnemySpawner : MonoBehaviour
                 enemy = PoolManager.Instance.enemyPool.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(4.5f);
+                {
+                    enemyComponent.Init(this, Random.Range(5f, 6f));
+                    enemies.Add(enemyComponent);
+                }
             }
             for (int i = 0; i < 1; i++)
             {
                 enemy = PoolManager.Instance.enemyPool2.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(9f);
+                {
+                    enemyComponent.Init(this, 9f);
+                    enemies.Add(enemyComponent);
+
+                }
             }
             yield return YieldInstructionCache.WaitForSeconds(5f);
         }
@@ -64,18 +87,39 @@ public class EnemySpawner : MonoBehaviour
                 enemy = PoolManager.Instance.enemyPool.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(4.5f);
+                {
+                    enemyComponent.Init(this, Random.Range(5.5f, 6.5f));
+                    enemies.Add(enemyComponent);
+                }
             }
             for (int i = 0; i < 2; i++)
             {
                 enemy = PoolManager.Instance.enemyPool2.GetPoolObject();
                 enemy.transform.position = GetSpawnPosition();
                 if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
-                    enemyComponent.Init(9f);
+                {
+                    enemyComponent.Init(this, 12f);
+                    enemies.Add(enemyComponent);
+                }
             }
             yield return YieldInstructionCache.WaitForSeconds(5f);
         }
+        yield return YieldInstructionCache.WaitForSeconds(1f);
+        StopSpawn();
+    }
 
+    private IEnumerator Upgrade()
+    {
+        int count = 10;
+        int n = 0;
+        while (n < count)
+        {
+            yield return YieldInstructionCache.WaitForSeconds(5f);
+
+            n++;
+            for (int i = 0; i < enemies.Count; i++)
+                enemies[i].UpgradeSpeed(0.2f);
+        }
     }
 
     private Vector3 GetSpawnPosition()
@@ -98,5 +142,11 @@ public class EnemySpawner : MonoBehaviour
             spawnPos.z += Random.Range(-15f, 15f);
         }
         return spawnPos;
+    }
+
+    public void RePosition(Enemy obje)
+    {
+        enemy = obje.gameObject;
+        enemy.transform.position = GetSpawnPosition();
     }
 }

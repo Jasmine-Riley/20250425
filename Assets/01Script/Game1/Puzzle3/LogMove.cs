@@ -33,7 +33,6 @@ public class LogMove : PoolObject, IMove
     {
         this.speed = speed;
         rigid.velocity = Vector3.zero;
-
         Invoke("DestorySelf", 15f);
     }
 

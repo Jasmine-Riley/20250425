@@ -47,11 +47,17 @@ public class CameraMove : MonoBehaviour
     //}
 
     private Transform target;
-    [SerializeField] private Vector3 offset;
+    private Vector3 offset;
     private GameObject obj;
     private Vector3 cameraPos;
-    private float removeY;
-    private float angle;
+
+    private Vector2 xRange = Vector2.zero;
+    private Vector2 yRange = Vector2.zero; 
+
+    private float rotateSensivity = 4.5f;
+
+    [SerializeField] private bool cameraRotatable = false;
+    [SerializeField] public float cameraYCenter = 180f;
 
     private void Awake()
     {
@@ -60,15 +66,41 @@ public class CameraMove : MonoBehaviour
         if (obj != null)
             target = obj.transform;
 
-        cameraPos = target.position;
-        removeY = target.transform.position.y;
+        cameraPos = transform.position;
+        offset = cameraPos - target.position;
+
+        xRange = new Vector2(-75f, 34.68f);
+        yRange = new Vector2(-40f, 40f);
     }
 
     private void LateUpdate()
     {
         cameraPos = target.position + offset;
-        cameraPos.y -= removeY;
 
         transform.position = cameraPos;
+    }
+
+    public void ChangeCameraRotation(Vector3 change)
+    {
+        if (!cameraRotatable) return;
+
+        var camAngle = transform.rotation.eulerAngles;
+
+        float x = camAngle.x - (change.y * rotateSensivity);
+        float y = camAngle.y + (change.x * rotateSensivity * 1.5f);
+
+        if (x < 180)
+            x = Mathf.Clamp(x, -1f, xRange.y);
+        else
+            x = Mathf.Clamp(x, 360f + xRange.x, 360f);
+
+        y = Mathf.Clamp(y, cameraYCenter + yRange.x, cameraYCenter + yRange.y);
+
+        transform.rotation = Quaternion.Euler(x, y, camAngle.z);
+    }
+    
+    public void ChangeYCenter(float value)
+    {
+        cameraYCenter = value;
     }
 }

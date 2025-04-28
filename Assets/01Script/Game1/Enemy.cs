@@ -17,11 +17,14 @@ public class Enemy : PoolObject
     private bool movable = false;
     private float speed = 2f;
     private GameObject target;
+    private EnemySpawner spawner;
     private Rigidbody rigid;
     private Animator anim;
 
-    public void Init(float speed)
+    public void Init(EnemySpawner spawner , float speed)
     {
+        this.spawner = spawner;
+
         TryGetComponent<Rigidbody>(out rigid);
         anim = GetComponentInChildren<Animator>();
         anim.speed = speed;
@@ -34,6 +37,17 @@ public class Enemy : PoolObject
         SetTarget(target);
     }
 
+    public void UpgradeSpeed(float value)
+    {
+        speed += value;
+        anim.speed = speed;
+    }
+
+    public void Stop()
+    {
+        ChangeState(EnemyState.Idle);
+    }
+
     private void ChangeState(EnemyState newState)
     {
         StopCoroutine(enemyState.ToString());
@@ -43,6 +57,8 @@ public class Enemy : PoolObject
 
     private IEnumerator Idle()
     {
+        rigid.velocity = Vector3.zero;
+
         while (true)
         {
             yield return null;
@@ -93,5 +109,11 @@ public class Enemy : PoolObject
             target = newTarget;
             ChangeState(EnemyState.Chase);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Destroyer"))
+            spawner.RePosition(this);
     }
 }

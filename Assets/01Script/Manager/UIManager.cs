@@ -11,6 +11,7 @@ public enum ButtonType
 
 public class UIManager : Singleton<UIManager> 
 {
+    private Image bloodScreen;
 
     private GameObject mail;
 
@@ -65,7 +66,10 @@ public class UIManager : Singleton<UIManager>
         var ui = GameObject.Find("UI");
         var uiCam = GameObject.Find("UI Camera");
 
+
         if (!ui) return;
+
+        GameObject.Find("BloodScreen").TryGetComponent<Image>(out bloodScreen);
 
         uiCam.TryGetComponent<Camera>(out uiCamera);
 
@@ -73,8 +77,11 @@ public class UIManager : Singleton<UIManager>
         Button btn;
 
         mail = ui.transform.GetChild(num++).gameObject;
-        mail.transform.GetChild(4).TryGetComponent<Button>(out btn);
-        btn.onClick.AddListener(CloseMail);
+        if (mail.transform.GetChild(4).TryGetComponent<Button>(out btn))
+        {
+            btn.onClick.AddListener(CloseMail);
+            btn.onClick.AddListener(OpenMission);
+        }
 
         chapter = ui.transform.GetChild(num++).gameObject;
         if (chapter.transform.GetChild(1).TryGetComponent<Button>(out btn))
@@ -83,24 +90,36 @@ public class UIManager : Singleton<UIManager>
         chapterContent = chapter.GetComponentInChildren<ContentSizeFitter>().gameObject;
         
         mission = ui.transform.GetChild(num++).gameObject;
+        if(mission.transform.GetChild(3).TryGetComponent<Button>(out btn))
+            btn.onClick.AddListener(CloseMission);
 
         chat = ui.transform.GetChild(num++).gameObject;
         chat.transform.GetChild(0).TryGetComponent<Image>(out  chatterImage);
         chat.transform.GetChild(1).TryGetComponent<TextMeshProUGUI>(out chatterNameText);
         chat.transform.GetChild(2).TryGetComponent<TextMeshProUGUI>(out chatText);
 
+        if (ScenarioManager.Instance)
+        {
+            if (chat.transform.GetChild(3).TryGetComponent<Button>(out btn))
+                btn.onClick.AddListener(ScenarioManager.Instance.NextPage);
+
+            if (chat.transform.GetChild(4).TryGetComponent<Button>(out btn))
+                btn.onClick.AddListener(ScenarioManager.Instance.StopStory);
+        }
+
+
         status = ui.transform.GetChild(num++).gameObject;
         hpStatus = status.transform.GetChild(0).gameObject;
         status.transform.GetChild(1).GetChild(0).TryGetComponent<TextMeshProUGUI>(out timer);
 
         playMenu = ui.transform.GetChild(num++).gameObject;
-        playMenu.transform.GetChild(0).TryGetComponent<Button>(out btn);
-        btn.onClick.AddListener(() => OpenMenuPopup());
+        if(playMenu.transform.GetChild(0).TryGetComponent<Button>(out btn))
+            btn.onClick.AddListener(() => OpenMenuPopup());
         TwoStateButton twobtn;
-        playMenu.transform.GetChild(1).TryGetComponent<TwoStateButton>(out twobtn);
-        twobtn.OnClick += () => GameManager.Instance.MusicOnOFF(twobtn.onT_offF);
-        playMenu.transform.GetChild(2).TryGetComponent<TwoStateButton>(out twobtn);
-        twobtn.OnClick += () => GameManager.Instance.StopResume(twobtn.onT_offF);
+        if(playMenu.transform.GetChild(1).TryGetComponent<TwoStateButton>(out twobtn))
+            twobtn.OnClick += () => GameManager.Instance.MusicOnOFF(twobtn.onT_offF);
+        if(playMenu.transform.GetChild(2).TryGetComponent<TwoStateButton>(out twobtn))
+            twobtn.OnClick += () => GameManager.Instance.StopResume(twobtn.onT_offF);
 
 
         star = ui.transform.GetChild(num++).gameObject;
@@ -279,6 +298,26 @@ public class UIManager : Singleton<UIManager>
 
         for(; i < hpStatus.transform.childCount; i++)
             hpStatus.transform.GetChild(i).gameObject.SetActive(false);
+
+
+
+        Image image;
+        Color color;
+        for (i = 0; i < n; i++)
+        {
+            clearPopupStar.transform.GetChild(i).TryGetComponent<Image>(out image);
+            color = image.color;
+            color.a = 1;
+            image.color = color;
+        }
+
+        for (i = n; i < clearPopupStar.transform.childCount; i++)
+        {
+            clearPopupStar.transform.GetChild(i).TryGetComponent<Image>(out image);
+            color = image.color;
+            color.a = 33f / 255f;
+            image.color = color;
+        }
     }
 
     public void SetTimer(float time)
@@ -361,16 +400,6 @@ public class UIManager : Singleton<UIManager>
         clearPopup.SetActive(true);
     }
 
-
-
-
-
-
-
-
-
-
-
     private void TouchBlock(bool tf)
     {
         touchBlocking = tf;
@@ -379,5 +408,12 @@ public class UIManager : Singleton<UIManager>
     private void UICameraShutDown()
     {
         uiCamera.enabled = false;
+    }
+
+    public void BloodScreen(float value)
+    {
+        var color = bloodScreen.color;
+        color.a = value;
+        bloodScreen.color = color;
     }
 }
